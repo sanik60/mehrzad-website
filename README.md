@@ -14,24 +14,27 @@ npm run build    # outputs to dist/
 
 Every push to `main` rebuilds and redeploys the site automatically (`.github/workflows/deploy.yml`).
 
-## Where things live
+## Back office
 
-| What | File |
+Content is edited at **https://app.pagescms.org** (Pages CMS): sign in with GitHub, open , edit, save. Each save is a commit, and the site redeploys in about a minute. The editing screens are defined in .
+
+| Back office section | File |
 | --- | --- |
-| Brand name, WhatsApp number, email, demo banner | `src/config.ts` |
-| Menu, buttons and page text in all 6 languages | `src/i18n.ts` |
-| Tours | `src/data/tours.ts` |
-| Hotels | `src/data/hotels.ts` |
-| Cities (airports, borders, sights) | `src/data/destinations.ts` |
-| Travel services and health treatments | `src/data/services.ts` |
-| Blog posts | `src/content/blog/<lang>/<slug>.md` |
-| Styles | `src/styles/global.css` |
+| Site settings (brand, WhatsApp, email, demo bar) |  |
+| Tours |  |
+| Hotels |  |
+| Cities |  |
+| Travel services / Health treatments | ,  |
+| Blog (one section per language) |  |
+| Uploaded photos |  |
 
-Content fields take one value per language, e.g. `{ en: '…', fa: '…', de: '…' }`. English is required; any missing language falls back to English and shows a "not translated yet" note. A blog post needs an English file; other languages are optional.
+Menu and button text in all 6 languages is in  (code, not in the back office).
+
+Every text has a box per language; English is required and empty languages show English with a "not translated yet" note. A blog translation must use the same URL name as the English article. Adding a new city also needs one line in the city lists in .
 
 ## Before launch
 
-- Replace the placeholders in `src/config.ts` (WhatsApp number, email) and set `demoContent: false`.
+- In the back office, Site settings: set the real WhatsApp number and email, and untick the demo bar.
 - Replace the sample hotels with real partner hotels.
 - Add real photos (WebP) in place of the gradient placeholders.
 - Add translations for Turkish, Arabic, Russian and German content.
