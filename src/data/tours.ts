@@ -1,5 +1,7 @@
 import type { Localized } from '../i18n';
+import data from '../content/tours.json';
 
+// Edited in the back office (Pages CMS) or directly in src/content/tours.json.
 export const categories = ['historical', 'ski', 'religious', 'combined', 'leisure', 'day'] as const;
 export type Category = (typeof categories)[number];
 
@@ -9,105 +11,11 @@ export interface Tour {
   days: number;
   cities: string[]; // destination slugs
   featured?: boolean;
+  image?: string;
   title: Localized;
   summary: Localized;
   highlights: Localized<string[]>;
 }
 
-export const tours: Tour[] = [
-  {
-    slug: 'classic-persia',
-    category: 'historical',
-    days: 12,
-    cities: ['tehran', 'isfahan', 'yazd', 'shiraz'],
-    featured: true,
-    title: { en: 'Classic Persia', fa: 'ایران کلاسیک' },
-    summary: {
-      en: 'The essential route through four historic cities, from the Golestan Palace to Persepolis.',
-      fa: 'مسیر اصلی از میان چهار شهر تاریخی؛ از کاخ گلستان تا تخت جمشید.',
-    },
-    highlights: {
-      en: ['Golestan Palace in Tehran', 'Naqsh-e Jahan Square in Isfahan', 'Old town and wind towers of Yazd', 'Persepolis and the gardens of Shiraz'],
-      fa: ['کاخ گلستان تهران', 'میدان نقش جهان اصفهان', 'بافت تاریخی و بادگیرهای یزد', 'تخت جمشید و باغ‌های شیراز'],
-    },
-  },
-  {
-    slug: 'dizin-ski-week',
-    category: 'ski',
-    days: 7,
-    cities: ['tehran'],
-    featured: true,
-    title: { en: 'Dizin Ski Week', fa: 'هفته اسکی دیزین' },
-    summary: {
-      en: 'Powder snow at one of the highest ski resorts in Asia, about three hours from Tehran.',
-      fa: 'برف پودری در یکی از مرتفع‌ترین پیست‌های آسیا، حدود سه ساعت از تهران.',
-    },
-    highlights: {
-      en: ['Five days on the slopes at Dizin', 'Optional day at Shemshak', 'Equipment rental and instructors', 'Private transfers from Tehran'],
-      fa: ['پنج روز اسکی در دیزین', 'یک روز اختیاری در شمشک', 'اجاره تجهیزات و مربی', 'ترانسفر اختصاصی از تهران'],
-    },
-  },
-  {
-    slug: 'mashhad-pilgrimage',
-    category: 'religious',
-    days: 5,
-    cities: ['mashhad'],
-    featured: true,
-    title: { en: 'Mashhad Pilgrimage', fa: 'زیارت مشهد' },
-    summary: {
-      en: 'A calm, well-organised pilgrimage with a hotel near the Imam Reza Shrine.',
-      fa: 'سفری زیارتی آرام و منظم با هتلی نزدیک حرم امام رضا (ع).',
-    },
-    highlights: {
-      en: ['Hotel within walking distance of the shrine', 'Guided visit of the shrine complex', 'Tomb of Ferdowsi in Tus', 'Airport transfers'],
-      fa: ['هتل نزدیک حرم', 'بازدید راهنمادار از مجموعه حرم', 'آرامگاه فردوسی در توس', 'ترانسفر فرودگاهی'],
-    },
-  },
-  {
-    slug: 'silk-road-north-west',
-    category: 'combined',
-    days: 9,
-    cities: ['tabriz', 'tehran'],
-    title: { en: 'Silk Road North-West', fa: 'جاده ابریشم شمال‌غرب' },
-    summary: {
-      en: 'Enter overland from Turkey or Azerbaijan and follow the old caravan route to Tehran.',
-      fa: 'ورود زمینی از ترکیه یا آذربایجان و دنبال کردن مسیر کاروان‌ها تا تهران.',
-    },
-    highlights: {
-      en: ['Tabriz Historic Bazaar', 'Cliff village of Kandovan', 'Armenian monasteries near Jolfa', 'Museums of Tehran'],
-      fa: ['بازار تاریخی تبریز', 'روستای صخره‌ای کندوان', 'کلیساهای ارمنی نزدیک جلفا', 'موزه‌های تهران'],
-    },
-  },
-  {
-    slug: 'shiraz-gardens',
-    category: 'leisure',
-    days: 6,
-    cities: ['shiraz'],
-    title: { en: 'Shiraz Gardens & Poetry', fa: 'باغ‌ها و شعر شیراز' },
-    summary: {
-      en: 'A slow-paced week of gardens, poetry, food and evening walks.',
-      fa: 'هفته‌ای آرام با باغ‌ها، شعر، غذا و پیاده‌روی‌های شبانه.',
-    },
-    highlights: {
-      en: ['Eram Garden', 'Tombs of Hafez and Saadi', 'Cooking class with a local family', 'Day trip to Persepolis'],
-      fa: ['باغ ارم', 'آرامگاه حافظ و سعدی', 'کلاس آشپزی با یک خانواده محلی', 'سفر یک‌روزه به تخت جمشید'],
-    },
-  },
-  {
-    slug: 'tehran-day-tour',
-    category: 'day',
-    days: 1,
-    cities: ['tehran'],
-    title: { en: 'Tehran in a Day', fa: 'تهران در یک روز' },
-    summary: {
-      en: 'Palaces, the bazaar and the National Museum with a private guide.',
-      fa: 'کاخ‌ها، بازار و موزه ملی با راهنمای اختصاصی.',
-    },
-    highlights: {
-      en: ['Golestan Palace', 'Grand Bazaar', 'National Museum of Iran', 'Hotel pick-up and drop-off'],
-      fa: ['کاخ گلستان', 'بازار بزرگ', 'موزه ملی ایران', 'رفت و برگشت از هتل'],
-    },
-  },
-];
-
+export const tours = data as Tour[];
 export const tourBySlug = (slug: string) => tours.find((t) => t.slug === slug);

@@ -1,0 +1,82 @@
+[
+  {
+    "slug": "dental",
+    "icon": "🦷",
+    "title": {
+      "en": "Dental care",
+      "fa": "دندانپزشکی",
+      "tr": "Diş tedavisi",
+      "ar": "طب الأسنان",
+      "ru": "Стоматология",
+      "de": "Zahnmedizin"
+    },
+    "text": {
+      "en": "Implants, veneers, crowns and full smile makeovers.",
+      "fa": "ایمپلنت، لمینت، روکش و طراحی لبخند."
+    }
+  },
+  {
+    "slug": "cosmetic",
+    "icon": "✨",
+    "title": {
+      "en": "Cosmetic surgery",
+      "fa": "جراحی زیبایی",
+      "tr": "Estetik cerrahi",
+      "ar": "الجراحة التجميلية",
+      "ru": "Пластическая хирургия",
+      "de": "Schönheitschirurgie"
+    },
+    "text": {
+      "en": "Rhinoplasty and other procedures with experienced surgeons.",
+      "fa": "جراحی بینی و سایر اعمال با جراحان باتجربه."
+    }
+  },
+  {
+    "slug": "eye",
+    "icon": "👁️",
+    "title": {
+      "en": "Eye surgery",
+      "fa": "جراحی چشم",
+      "tr": "Göz cerrahisi",
+      "ar": "جراحة العيون",
+      "ru": "Офтальмология",
+      "de": "Augenchirurgie"
+    },
+    "text": {
+      "en": "LASIK, cataract and other eye procedures.",
+      "fa": "لیزیک، آب‌مروارید و سایر اعمال چشم."
+    }
+  },
+  {
+    "slug": "fertility",
+    "icon": "👶",
+    "title": {
+      "en": "Fertility & IVF",
+      "fa": "ناباروری و IVF",
+      "tr": "Tüp bebek",
+      "ar": "الخصوبة وأطفال الأنابيب",
+      "ru": "ЭКО",
+      "de": "Kinderwunsch & IVF"
+    },
+    "text": {
+      "en": "Consultation and treatment at specialist fertility centres.",
+      "fa": "مشاوره و درمان در مراکز تخصصی ناباروری."
+    }
+  },
+  {
+    "slug": "checkup",
+    "icon": "🩺",
+    "title": {
+      "en": "Health check-ups",
+      "fa": "چکاپ کامل",
+      "tr": "Check-up",
+      "ar": "الفحوصات الشاملة",
+      "ru": "Чекап",
+      "de": "Gesundheitscheck"
+    },
+    "text": {
+      "en": "Full check-up packages completed in one or two days.",
+      "fa": "بسته‌های چکاپ کامل در یک یا دو روز."
+    }
+  }
+]

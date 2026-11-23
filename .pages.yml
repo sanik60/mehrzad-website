@@ -1,0 +1,299 @@
+# Back office configuration for Pages CMS (https://app.pagescms.org).
+# English is required for every text; leave other languages empty to show English.
+
+media:
+  input: public/images
+  output: /mehrzad-website/images
+  categories: [image]
+  rename: safe
+
+components:
+  text_i18n:
+    type: object
+    fields:
+      - { name: en, label: English, type: string, required: true }
+      - { name: fa, label: فارسی, type: string }
+      - { name: tr, label: Türkçe, type: string }
+      - { name: ar, label: العربية, type: string }
+      - { name: ru, label: Русский, type: string }
+      - { name: de, label: Deutsch, type: string }
+  longtext_i18n:
+    type: object
+    fields:
+      - { name: en, label: English, type: text, required: true }
+      - { name: fa, label: فارسی, type: text }
+      - { name: tr, label: Türkçe, type: text }
+      - { name: ar, label: العربية, type: text }
+      - { name: ru, label: Русский, type: text }
+      - { name: de, label: Deutsch, type: text }
+  list_i18n:
+    type: object
+    fields:
+      - { name: en, label: English, type: string, list: true }
+      - { name: fa, label: فارسی, type: string, list: true }
+      - { name: tr, label: Türkçe, type: string, list: true }
+      - { name: ar, label: العربية, type: string, list: true }
+      - { name: ru, label: Русский, type: string, list: true }
+      - { name: de, label: Deutsch, type: string, list: true }
+
+content:
+  - name: settings
+    label: Site settings
+    type: file
+    path: src/content/settings.json
+    format: json
+    fields:
+      - { name: brand, label: Brand name, type: string, required: true }
+      - name: whatsapp
+        label: WhatsApp number
+        type: string
+        required: true
+        description: International format, digits only, e.g. 989121234567
+        pattern: { regex: "^[0-9]{8,15}$", message: "Digits only, with country code, no + or spaces" }
+      - { name: email, label: Email, type: string, required: true }
+      - { name: demoContent, label: Show "demo content" bar, type: boolean }
+
+  - name: tours
+    label: Tours
+    type: file
+    path: src/content/tours.json
+    format: json
+    list: true
+    fields:
+      - name: slug
+        label: URL name
+        type: string
+        required: true
+        description: Lowercase letters, numbers and dashes, e.g. classic-persia. Changing it changes the page address.
+        pattern: { regex: "^[a-z0-9-]+$", message: "Lowercase letters, numbers and dashes only" }
+      - { name: title, label: Title, component: text_i18n }
+      - name: category
+        label: Category
+        type: select
+        required: true
+        options:
+          values:
+            - { name: historical, label: Historical }
+            - { name: ski, label: Ski }
+            - { name: religious, label: Religious }
+            - { name: combined, label: Combined }
+            - { name: leisure, label: Leisure }
+            - { name: day, label: Day tour }
+      - { name: days, label: Days, type: number, required: true, options: { min: 1 } }
+      - name: cities
+        label: Cities
+        type: select
+        options:
+          multiple: true
+          values: &cities
+            - { name: tehran, label: Tehran }
+            - { name: isfahan, label: Isfahan }
+            - { name: shiraz, label: Shiraz }
+            - { name: yazd, label: Yazd }
+            - { name: tabriz, label: Tabriz }
+            - { name: mashhad, label: Mashhad }
+      - { name: featured, label: Show on home page, type: boolean }
+      - { name: image, label: Photo, type: image }
+      - { name: summary, label: Summary, component: longtext_i18n }
+      - { name: highlights, label: Highlights, component: list_i18n }
+
+  - name: hotels
+    label: Hotels
+    type: file
+    path: src/content/hotels.json
+    format: json
+    list: true
+    fields:
+      - name: slug
+        label: ID
+        type: string
+        required: true
+        pattern: { regex: "^[a-z0-9-]+$", message: "Lowercase letters, numbers and dashes only" }
+      - { name: name, label: Hotel name, component: text_i18n }
+      - name: city
+        label: City
+        type: select
+        required: true
+        options: { values: *cities }
+      - name: stars
+        label: Stars
+        type: select
+        required: true
+        options: { values: [3, 4, 5] }
+      - name: amenities
+        label: Amenities
+        type: select
+        options:
+          multiple: true
+          values:
+            - { name: wifi, label: Wi-Fi }
+            - { name: pool, label: Pool }
+            - { name: spa, label: Spa }
+            - { name: parking, label: Parking }
+            - { name: restaurant, label: Restaurant }
+            - { name: shuttle, label: Airport shuttle }
+      - { name: image, label: Photo, type: image }
+
+  - name: destinations
+    label: Cities
+    type: file
+    path: src/content/destinations.json
+    format: json
+    list: true
+    fields:
+      - name: slug
+        label: URL name
+        type: string
+        required: true
+        description: New cities also need adding to the city lists in .pages.yml so tours and hotels can select them.
+        pattern: { regex: "^[a-z0-9-]+$", message: "Lowercase letters, numbers and dashes only" }
+      - { name: name, label: City name, component: text_i18n }
+      - { name: image, label: Photo, type: image }
+      - { name: summary, label: Summary, component: longtext_i18n }
+      - { name: airport, label: Airport, component: text_i18n }
+      - { name: borders, label: Nearby land borders (optional), component: text_i18n }
+      - { name: sights, label: Must-see places, component: list_i18n }
+
+  - name: services
+    label: Travel services
+    type: file
+    path: src/content/services.json
+    format: json
+    list: true
+    fields:
+      - { name: slug, label: ID, type: string, required: true }
+      - { name: icon, label: Icon (emoji), type: string }
+      - { name: title, label: Title, component: text_i18n }
+      - { name: text, label: Description, component: longtext_i18n }
+
+  - name: treatments
+    label: Health treatments
+    type: file
+    path: src/content/treatments.json
+    format: json
+    list: true
+    fields:
+      - { name: slug, label: ID, type: string, required: true }
+      - { name: icon, label: Icon (emoji), type: string }
+      - { name: title, label: Title, component: text_i18n }
+      - { name: text, label: Description, component: longtext_i18n }
+
+  - name: blog-en
+    label: "Blog: English (required)"
+    type: collection
+    path: src/content/blog/en
+    format: yaml-frontmatter
+    filename: { template: "{fields.slug}.md", field: false }
+    exclude: [.gitkeep]
+    view: { fields: [title, date], primary: title, default: { sort: date, order: desc } }
+    fields:
+      - name: slug
+        label: URL name
+        type: string
+        required: true
+        description: Lowercase and dashes, e.g. iran-visa-guide. A translation must use the same URL name as the English article.
+        pattern: { regex: "^[a-z0-9-]+$", message: "Lowercase letters, numbers and dashes only" }
+      - { name: title, label: Title, type: string, required: true }
+      - { name: description, label: Short description (for Google), type: text, required: true }
+      - { name: date, label: Date, type: date, required: true }
+      - { name: body, label: Article, type: rich-text, options: { format: markdown } }
+
+  - name: blog-fa
+    label: "Blog: فارسی"
+    type: collection
+    path: src/content/blog/fa
+    format: yaml-frontmatter
+    filename: { template: "{fields.slug}.md", field: false }
+    exclude: [.gitkeep]
+    view: { fields: [title, date], primary: title, default: { sort: date, order: desc } }
+    fields:
+      - name: slug
+        label: URL name
+        type: string
+        required: true
+        description: Lowercase and dashes, e.g. iran-visa-guide. A translation must use the same URL name as the English article.
+        pattern: { regex: "^[a-z0-9-]+$", message: "Lowercase letters, numbers and dashes only" }
+      - { name: title, label: Title, type: string, required: true }
+      - { name: description, label: Short description (for Google), type: text, required: true }
+      - { name: date, label: Date, type: date, required: true }
+      - { name: body, label: Article, type: rich-text, options: { format: markdown } }
+
+  - name: blog-tr
+    label: "Blog: Türkçe"
+    type: collection
+    path: src/content/blog/tr
+    format: yaml-frontmatter
+    filename: { template: "{fields.slug}.md", field: false }
+    exclude: [.gitkeep]
+    view: { fields: [title, date], primary: title, default: { sort: date, order: desc } }
+    fields:
+      - name: slug
+        label: URL name
+        type: string
+        required: true
+        description: Lowercase and dashes, e.g. iran-visa-guide. A translation must use the same URL name as the English article.
+        pattern: { regex: "^[a-z0-9-]+$", message: "Lowercase letters, numbers and dashes only" }
+      - { name: title, label: Title, type: string, required: true }
+      - { name: description, label: Short description (for Google), type: text, required: true }
+      - { name: date, label: Date, type: date, required: true }
+      - { name: body, label: Article, type: rich-text, options: { format: markdown } }
+
+  - name: blog-ar
+    label: "Blog: العربية"
+    type: collection
+    path: src/content/blog/ar
+    format: yaml-frontmatter
+    filename: { template: "{fields.slug}.md", field: false }
+    exclude: [.gitkeep]
+    view: { fields: [title, date], primary: title, default: { sort: date, order: desc } }
+    fields:
+      - name: slug
+        label: URL name
+        type: string
+        required: true
+        description: Lowercase and dashes, e.g. iran-visa-guide. A translation must use the same URL name as the English article.
+        pattern: { regex: "^[a-z0-9-]+$", message: "Lowercase letters, numbers and dashes only" }
+      - { name: title, label: Title, type: string, required: true }
+      - { name: description, label: Short description (for Google), type: text, required: true }
+      - { name: date, label: Date, type: date, required: true }
+      - { name: body, label: Article, type: rich-text, options: { format: markdown } }
+
+  - name: blog-ru
+    label: "Blog: Русский"
+    type: collection
+    path: src/content/blog/ru
+    format: yaml-frontmatter
+    filename: { template: "{fields.slug}.md", field: false }
+    exclude: [.gitkeep]
+    view: { fields: [title, date], primary: title, default: { sort: date, order: desc } }
+    fields:
+      - name: slug
+        label: URL name
+        type: string
+        required: true
+        description: Lowercase and dashes, e.g. iran-visa-guide. A translation must use the same URL name as the English article.
+        pattern: { regex: "^[a-z0-9-]+$", message: "Lowercase letters, numbers and dashes only" }
+      - { name: title, label: Title, type: string, required: true }
+      - { name: description, label: Short description (for Google), type: text, required: true }
+      - { name: date, label: Date, type: date, required: true }
+      - { name: body, label: Article, type: rich-text, options: { format: markdown } }
+
+  - name: blog-de
+    label: "Blog: Deutsch"
+    type: collection
+    path: src/content/blog/de
+    format: yaml-frontmatter
+    filename: { template: "{fields.slug}.md", field: false }
+    exclude: [.gitkeep]
+    view: { fields: [title, date], primary: title, default: { sort: date, order: desc } }
+    fields:
+      - name: slug
+        label: URL name
+        type: string
+        required: true
+        description: Lowercase and dashes, e.g. iran-visa-guide. A translation must use the same URL name as the English article.
+        pattern: { regex: "^[a-z0-9-]+$", message: "Lowercase letters, numbers and dashes only" }
+      - { name: title, label: Title, type: string, required: true }
+      - { name: description, label: Short description (for Google), type: text, required: true }
+      - { name: date, label: Date, type: date, required: true }
+      - { name: body, label: Article, type: rich-text, options: { format: markdown } }

@@ -14,12 +14,17 @@ export const defaultLang: Lang = 'en';
 /** A field that may be translated; English is required and used as the fallback. */
 export type Localized<T = string> = { en: T } & Partial<Record<Lang, T>>;
 
+// The back office saves untranslated fields as "" or [], so treat those as missing too.
+const filled = (v: unknown) =>
+  v !== undefined && v !== null && (Array.isArray(v) ? v.some((x) => String(x).trim()) : String(v).trim() !== '');
+
 export function pick<T>(value: Localized<T>, lang: Lang): T {
-  return value[lang] ?? value.en;
+  const v = value[lang];
+  return filled(v) ? (v as T) : value.en;
 }
 
 export function hasTranslation(value: Localized<unknown>, lang: Lang): boolean {
-  return value[lang] !== undefined;
+  return filled(value[lang]);
 }
 
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');

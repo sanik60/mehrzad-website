@@ -2,7 +2,7 @@
 import Base from '../../../layouts/Base.astro';
 import { useT, langs, type Lang } from '../../../i18n';
 import { categories } from '../../../data/tours';
-import { site } from '../../../config';
+import { whatsappDigits } from "../../../config";
 
 export const getStaticPaths = () => langs.map((lang) => ({ params: { lang } }));
 const lang = Astro.params.lang as Lang;
@@ -20,7 +20,7 @@ const labels = {
   <section class="container page-head narrow">
     <h1>{t('tailor.title')}</h1>
     <p class="lead">{t('tailor.intro')}</p>
-    <form id="tailor-form" class="form" data-wa={site.whatsapp} data-labels={JSON.stringify(labels)} data-heading={t('tailor.title')}>
+    <form id="tailor-form" class="form" data-wa={whatsappDigits} data-labels={JSON.stringify(labels)} data-heading={t('tailor.title')}>
       <label>{labels.name}<input name="name" required autocomplete="name" /></label>
       <label>{labels.country}<input name="country" autocomplete="country-name" /></label>
       <div class="form-row">

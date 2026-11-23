@@ -275,3 +275,5 @@ label.check input { width: auto; }
 .rtl .arrow { display: inline-block; transform: scaleX(-1); }
 /* Untranslated (English) text on RTL pages keeps its own direction and punctuation. */
 .rtl :is(p, li, dd, h1, h2, h3, blockquote) { unicode-bidi: plaintext; }
+.has-photo { background-size: cover; background-position: center; background-color: var(--soft); }
+.detail-banner.has-photo { box-shadow: inset 0 -80px 80px -40px rgb(0 0 0 / 45%); }

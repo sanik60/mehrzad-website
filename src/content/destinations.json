@@ -1,0 +1,218 @@
+[
+  {
+    "slug": "tehran",
+    "name": {
+      "en": "Tehran",
+      "fa": "تهران",
+      "tr": "Tahran",
+      "ar": "طهران",
+      "ru": "Тегеран",
+      "de": "Teheran"
+    },
+    "summary": {
+      "en": "The capital at the foot of the Alborz mountains: palaces, museums, bazaars and the gateway to the Dizin and Shemshak ski resorts.",
+      "fa": "پایتخت در دامنه البرز: کاخ‌ها، موزه‌ها، بازارها و دروازه پیست‌های اسکی دیزین و شمشک."
+    },
+    "airport": {
+      "en": "Imam Khomeini International Airport (IKA)",
+      "fa": "فرودگاه بین‌المللی امام خمینی (IKA)"
+    },
+    "sights": {
+      "en": [
+        "Golestan Palace",
+        "National Museum of Iran",
+        "Tehran Grand Bazaar",
+        "Tochal Telecabin",
+        "Milad Tower"
+      ],
+      "fa": [
+        "کاخ گلستان",
+        "موزه ملی ایران",
+        "بازار بزرگ تهران",
+        "تله‌کابین توچال",
+        "برج میلاد"
+      ]
+    }
+  },
+  {
+    "slug": "isfahan",
+    "name": {
+      "en": "Isfahan",
+      "fa": "اصفهان",
+      "tr": "İsfahan",
+      "ar": "أصفهان",
+      "ru": "Исфахан",
+      "de": "Isfahan"
+    },
+    "summary": {
+      "en": "Blue-tiled mosques, historic bridges and one of the largest city squares in the world.",
+      "fa": "مساجد کاشی‌کاری‌شده، پل‌های تاریخی و یکی از بزرگ‌ترین میدان‌های جهان."
+    },
+    "airport": {
+      "en": "Isfahan International Airport (IFN)",
+      "fa": "فرودگاه بین‌المللی اصفهان (IFN)"
+    },
+    "sights": {
+      "en": [
+        "Naqsh-e Jahan Square",
+        "Sheikh Lotfollah Mosque",
+        "Si-o-se-pol Bridge",
+        "Khaju Bridge",
+        "Vank Cathedral"
+      ],
+      "fa": [
+        "میدان نقش جهان",
+        "مسجد شیخ لطف‌الله",
+        "سی‌وسه‌پل",
+        "پل خواجو",
+        "کلیسای وانک"
+      ]
+    }
+  },
+  {
+    "slug": "shiraz",
+    "name": {
+      "en": "Shiraz",
+      "fa": "شیراز",
+      "tr": "Şiraz",
+      "ar": "شيراز",
+      "ru": "Шираз",
+      "de": "Schiras"
+    },
+    "summary": {
+      "en": "City of poets and gardens, and the base for visiting Persepolis.",
+      "fa": "شهر شاعران و باغ‌ها و مبدأ بازدید از تخت جمشید."
+    },
+    "airport": {
+      "en": "Shiraz International Airport (SYZ)",
+      "fa": "فرودگاه بین‌المللی شیراز (SYZ)"
+    },
+    "sights": {
+      "en": [
+        "Persepolis",
+        "Nasir al-Mulk Mosque",
+        "Eram Garden",
+        "Tomb of Hafez",
+        "Vakil Bazaar"
+      ],
+      "fa": [
+        "تخت جمشید",
+        "مسجد نصیرالملک",
+        "باغ ارم",
+        "آرامگاه حافظ",
+        "بازار وکیل"
+      ]
+    }
+  },
+  {
+    "slug": "yazd",
+    "name": {
+      "en": "Yazd",
+      "fa": "یزد",
+      "tr": "Yezd",
+      "ar": "يزد",
+      "ru": "Йезд",
+      "de": "Yazd"
+    },
+    "summary": {
+      "en": "A desert city of mud-brick lanes and wind towers, listed by UNESCO.",
+      "fa": "شهر کویری کوچه‌های خشتی و بادگیرها، ثبت‌شده در یونسکو."
+    },
+    "airport": {
+      "en": "Yazd Airport (AZD)",
+      "fa": "فرودگاه یزد (AZD)"
+    },
+    "sights": {
+      "en": [
+        "Historic old town",
+        "Jameh Mosque of Yazd",
+        "Dowlat Abad Garden",
+        "Amir Chakhmaq Complex",
+        "Zoroastrian Fire Temple"
+      ],
+      "fa": [
+        "بافت تاریخی",
+        "مسجد جامع یزد",
+        "باغ دولت‌آباد",
+        "مجموعه امیرچخماق",
+        "آتشکده زرتشتیان"
+      ]
+    }
+  },
+  {
+    "slug": "tabriz",
+    "name": {
+      "en": "Tabriz",
+      "fa": "تبریز",
+      "tr": "Tebriz",
+      "ar": "تبريز",
+      "ru": "Тебриз",
+      "de": "Täbris"
+    },
+    "summary": {
+      "en": "A Silk Road trading city in the north-west, close to the Turkish and Azerbaijani borders.",
+      "fa": "شهر تجاری جاده ابریشم در شمال‌غرب، نزدیک مرزهای ترکیه و آذربایجان."
+    },
+    "airport": {
+      "en": "Tabriz International Airport (TBZ)",
+      "fa": "فرودگاه بین‌المللی تبریز (TBZ)"
+    },
+    "borders": {
+      "en": "Bazargan (Turkey) and Jolfa (Nakhchivan, Azerbaijan)",
+      "fa": "بازرگان (ترکیه) و جلفا (نخجوان، آذربایجان)"
+    },
+    "sights": {
+      "en": [
+        "Tabriz Historic Bazaar",
+        "Blue Mosque",
+        "El Goli Park",
+        "Kandovan village",
+        "Arg-e Tabriz"
+      ],
+      "fa": [
+        "بازار تاریخی تبریز",
+        "مسجد کبود",
+        "ائل‌گلی",
+        "روستای کندوان",
+        "ارگ تبریز"
+      ]
+    }
+  },
+  {
+    "slug": "mashhad",
+    "name": {
+      "en": "Mashhad",
+      "fa": "مشهد",
+      "tr": "Meşhed",
+      "ar": "مشهد",
+      "ru": "Мешхед",
+      "de": "Maschhad"
+    },
+    "summary": {
+      "en": "Home to the Imam Reza Shrine, one of the most visited pilgrimage sites in the world.",
+      "fa": "محل حرم امام رضا (ع)، از پربازدیدترین زیارتگاه‌های جهان."
+    },
+    "airport": {
+      "en": "Mashhad International Airport (MHD)",
+      "fa": "فرودگاه بین‌المللی مشهد (MHD)"
+    },
+    "borders": {
+      "en": "Sarakhs and Bajgiran (Turkmenistan)",
+      "fa": "سرخس و باجگیران (ترکمنستان)"
+    },
+    "sights": {
+      "en": [
+        "Imam Reza Shrine",
+        "Tomb of Ferdowsi (Tus)",
+        "Kooh Sangi Park",
+        "Torghabeh and Shandiz"
+      ],
+      "fa": [
+        "حرم امام رضا (ع)",
+        "آرامگاه فردوسی (توس)",
+        "پارک کوه‌سنگی",
+        "طرقبه و شاندیز"
+      ]
+    }
+  }
+]

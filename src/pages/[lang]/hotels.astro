@@ -1,5 +1,6 @@
 ---
 import Base from '../../layouts/Base.astro';
+import Art from '../../components/Art.astro';
 import Stars from '../../components/Stars.astro';
 import { href, pick, useT, langs, type Lang } from '../../i18n';
 import { hotels, amenities } from '../../data/hotels';
@@ -57,7 +58,7 @@ const schema = {
       <div class="grid" id="hotel-grid">
         {hotels.map((h) => (
           <article class="card hotel-card" data-city={h.city} data-stars={h.stars} data-amenities={h.amenities.join(' ')}>
-            <div class={`card-art art-${h.city}`} aria-hidden="true"></div>
+            <Art art={h.city} image={h.image} alt={pick(h.name, lang)} />
             <div class="card-body">
               <Stars count={h.stars} />
               <h3>{pick(h.name, lang)}</h3>

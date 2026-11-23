@@ -1,5 +1,6 @@
 ---
 import Base from '../../../layouts/Base.astro';
+import Art from '../../../components/Art.astro';
 import Notice from '../../../components/Notice.astro';
 import { href, pick, hasTranslation, useT, langs, type Lang } from '../../../i18n';
 import { tours, type Tour } from '../../../data/tours';
@@ -30,7 +31,7 @@ const schema = {
 };
 ---
 <Base lang={lang} title={title} description={summary} path={`tours/${tour.slug}`} schema={schema}>
-  <div class={`detail-banner art-${tour.category}`}></div>
+  <Art banner art={tour.category} image={tour.image} alt={title} />
   <article class="container page-head narrow">
     <Notice lang={lang} show={!hasTranslation(tour.title, lang)} />
     <span class="tag">{t(`cat.${tour.category}`)}</span>

@@ -1,0 +1,11 @@
+---
+// A photo when one is set in the back office, otherwise the coloured placeholder.
+interface Props { art: string; image?: string; alt?: string; banner?: boolean }
+const { art, image, alt = '', banner = false } = Astro.props;
+const cls = banner ? 'detail-banner' : 'card-art';
+---
+{image ? (
+  <div class={`${cls} has-photo`} style={`background-image:url('${image}')`} role={alt ? 'img' : undefined} aria-label={alt || undefined}><slot /></div>
+) : (
+  <div class={`${cls} art-${art}`} aria-hidden={banner ? undefined : 'true'}><slot /></div>
+)}

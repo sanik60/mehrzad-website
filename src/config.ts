@@ -1,12 +1,14 @@
-// Site-wide settings. Replace the placeholders before launch.
-export const site = {
-  brand: 'Mehrzad Travel',
-  // International format, digits only, no "+" (used for wa.me links). PLACEHOLDER.
-  whatsapp: '989000000000',
-  email: 'info@example.com', // PLACEHOLDER
-  // Shows a thin "demo content" bar on every page until real content is in.
-  demoContent: true,
+import settings from './content/settings.json';
+
+// Edited in the back office ("Site settings") or directly in src/content/settings.json.
+export const site = settings as {
+  brand: string;
+  whatsapp: string; // international format, digits only
+  email: string;
+  demoContent: boolean;
 };
 
+export const whatsappDigits = site.whatsapp.replace(/\D/g, '');
+
 export const whatsappLink = (text?: string) =>
-  `https://wa.me/${site.whatsapp}${text ? `?text=${encodeURIComponent(text)}` : ''}`;
+  `https://wa.me/${whatsappDigits}${text ? `?text=${encodeURIComponent(text)}` : ''}`;

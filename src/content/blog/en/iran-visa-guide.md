@@ -1,4 +1,5 @@
 ---
+slug: iran-visa-guide
 title: "Iran visa: a step-by-step guide for tourists"
 description: "How the Iran tourist visa process works, what documents you need, and how we help."
 date: 2026-11-01

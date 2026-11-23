@@ -1,5 +1,6 @@
 ---
 import Base from '../../../layouts/Base.astro';
+import Art from '../../../components/Art.astro';
 import Notice from '../../../components/Notice.astro';
 import TourCard from '../../../components/TourCard.astro';
 import Stars from '../../../components/Stars.astro';
@@ -29,7 +30,7 @@ const schema = {
 };
 ---
 <Base lang={lang} title={name} description={summary} path={`destinations/${d.slug}`} schema={schema}>
-  <div class={`detail-banner art-${d.slug}`}><div class="container"><h1>{name}</h1></div></div>
+  <Art banner art={d.slug} image={d.image}><div class="container"><h1>{name}</h1></div></Art>
   <article class="container page-head">
     <Notice lang={lang} show={!hasTranslation(d.summary, lang)} />
     <p class="lead">{summary}</p>

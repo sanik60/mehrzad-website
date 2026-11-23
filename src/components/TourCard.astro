@@ -1,4 +1,5 @@
 ---
+import Art from './Art.astro';
 import { href, pick, useT, type Lang } from '../i18n';
 import type { Tour } from '../data/tours';
 import { destinationBySlug } from '../data/destinations';
@@ -9,7 +10,7 @@ const t = useT(lang);
 const cities = tour.cities.map((c) => pick(destinationBySlug(c)!.name, lang)).join(' · ');
 ---
 <article class="card tour-card" data-category={tour.category}>
-  <div class={`card-art art-${tour.category}`} aria-hidden="true"></div>
+  <Art art={tour.category} image={tour.image} alt={pick(tour.title, lang)} />
   <div class="card-body">
     <span class="tag">{t(`cat.${tour.category}`)}</span>
     <h3><a href={href(lang, `tours/${tour.slug}`)}>{pick(tour.title, lang)}</a></h3>

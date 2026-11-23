@@ -1,5 +1,6 @@
 ---
 import Base from '../../../layouts/Base.astro';
+import Art from '../../../components/Art.astro';
 import { href, pick, useT, langs, type Lang } from '../../../i18n';
 import { destinations } from '../../../data/destinations';
 
@@ -16,7 +17,7 @@ const t = useT(lang);
     <div class="grid">
       {destinations.map((d) => (
         <article class="card">
-          <div class={`card-art art-${d.slug}`} aria-hidden="true"></div>
+          <Art art={d.slug} image={d.image} alt={pick(d.name, lang)} />
           <div class="card-body">
             <h3><a href={href(lang, `destinations/${d.slug}`)}>{pick(d.name, lang)}</a></h3>
             <p>{pick(d.summary, lang)}</p>

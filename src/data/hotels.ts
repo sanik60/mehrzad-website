@@ -1,25 +1,17 @@
 import type { Localized } from '../i18n';
+import data from '../content/hotels.json';
 
+// Edited in the back office (Pages CMS) or directly in src/content/hotels.json.
 export const amenities = ['wifi', 'pool', 'spa', 'parking', 'restaurant', 'shuttle'] as const;
 export type Amenity = (typeof amenities)[number];
 
 export interface Hotel {
   slug: string;
   city: string; // destination slug
-  stars: 3 | 4 | 5;
+  stars: number;
   amenities: Amenity[];
+  image?: string;
   name: Localized;
 }
 
-// SAMPLE hotels. Replace with the agency's real partner hotels.
-export const hotels: Hotel[] = [
-  { slug: 'tehran-grand', city: 'tehran', stars: 5, amenities: ['wifi', 'pool', 'spa', 'parking', 'restaurant', 'shuttle'], name: { en: 'Sample Grand Hotel Tehran', fa: 'هتل نمونه گرند تهران' } },
-  { slug: 'tehran-city', city: 'tehran', stars: 4, amenities: ['wifi', 'restaurant', 'shuttle'], name: { en: 'Sample City Hotel Tehran', fa: 'هتل نمونه سیتی تهران' } },
-  { slug: 'isfahan-heritage', city: 'isfahan', stars: 5, amenities: ['wifi', 'spa', 'restaurant', 'parking'], name: { en: 'Sample Heritage Hotel Isfahan', fa: 'هتل نمونه میراث اصفهان' } },
-  { slug: 'isfahan-garden', city: 'isfahan', stars: 3, amenities: ['wifi', 'restaurant'], name: { en: 'Sample Garden Inn Isfahan', fa: 'مهمانسرای نمونه باغ اصفهان' } },
-  { slug: 'shiraz-palace', city: 'shiraz', stars: 5, amenities: ['wifi', 'pool', 'restaurant', 'parking', 'shuttle'], name: { en: 'Sample Palace Hotel Shiraz', fa: 'هتل نمونه پالاس شیراز' } },
-  { slug: 'yazd-courtyard', city: 'yazd', stars: 4, amenities: ['wifi', 'restaurant'], name: { en: 'Sample Courtyard Hotel Yazd', fa: 'هتل سنتی نمونه یزد' } },
-  { slug: 'tabriz-central', city: 'tabriz', stars: 4, amenities: ['wifi', 'restaurant', 'parking'], name: { en: 'Sample Central Hotel Tabriz', fa: 'هتل نمونه مرکزی تبریز' } },
-  { slug: 'mashhad-shrine-view', city: 'mashhad', stars: 5, amenities: ['wifi', 'restaurant', 'shuttle', 'parking'], name: { en: 'Sample Shrine View Hotel Mashhad', fa: 'هتل نمونه نزدیک حرم مشهد' } },
-  { slug: 'mashhad-family', city: 'mashhad', stars: 3, amenities: ['wifi', 'restaurant'], name: { en: 'Sample Family Hotel Mashhad', fa: 'هتل نمونه خانوادگی مشهد' } },
-];
+export const hotels = data as Hotel[];
