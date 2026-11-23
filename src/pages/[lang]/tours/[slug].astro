@@ -1,0 +1,54 @@
+---
+import Base from '../../../layouts/Base.astro';
+import Notice from '../../../components/Notice.astro';
+import { href, pick, hasTranslation, useT, langs, type Lang } from '../../../i18n';
+import { tours, type Tour } from '../../../data/tours';
+import { destinationBySlug } from '../../../data/destinations';
+import { site, whatsappLink } from '../../../config';
+
+export const getStaticPaths = () =>
+  langs.flatMap((lang) => tours.map((tour) => ({ params: { lang, slug: tour.slug }, props: { tour } })));
+
+const lang = Astro.params.lang as Lang;
+const { tour } = Astro.props as { tour: Tour };
+const t = useT(lang);
+const title = pick(tour.title, lang);
+const summary = pick(tour.summary, lang);
+const cities = tour.cities.map((c) => destinationBySlug(c)!);
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'TouristTrip',
+  name: title,
+  description: summary,
+  touristType: t(`cat.${tour.category}`),
+  provider: { '@type': 'TravelAgency', name: site.brand },
+  itinerary: {
+    '@type': 'ItemList',
+    itemListElement: cities.map((c, i) => ({ '@type': 'ListItem', position: i + 1, item: { '@type': 'City', name: c.name.en } })),
+  },
+};
+---
+<Base lang={lang} title={title} description={summary} path={`tours/${tour.slug}`} schema={schema}>
+  <div class={`detail-banner art-${tour.category}`}></div>
+  <article class="container page-head narrow">
+    <Notice lang={lang} show={!hasTranslation(tour.title, lang)} />
+    <span class="tag">{t(`cat.${tour.category}`)}</span>
+    <h1>{title}</h1>
+    <p class="lead">{summary}</p>
+    <dl class="facts">
+      <div><dt>⏱</dt><dd>{tour.days} {tour.days === 1 ? t('tours.day') : t('tours.days')}</dd></div>
+      <div>
+        <dt>📍 {t('tours.cities')}</dt>
+        <dd>{cities.map((c, i) => <>{i > 0 && ' · '}<a href={href(lang, `destinations/${c.slug}`)}>{pick(c.name, lang)}</a></>)}</dd>
+      </div>
+      <div><dt>💶</dt><dd>{t('tours.price')}</dd></div>
+    </dl>
+    <h2>{t('tours.highlights')}</h2>
+    <ul class="checklist">{pick(tour.highlights, lang).map((h) => <li>{h}</li>)}</ul>
+    <p class="actions">
+      <a class="btn btn-wa" href={whatsappLink(`${t('cta.requestTour')}: ${tour.title.en}`)} target="_blank" rel="noopener">{t('cta.requestTour')}</a>
+      <a class="btn btn-light" href={href(lang, 'tours/tailor-made')}>{t('cta.tailor')}</a>
+    </p>
+  </article>
+</Base>

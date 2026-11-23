@@ -1,0 +1,19 @@
+---
+import { href, pick, useT, type Lang } from '../i18n';
+import type { Tour } from '../data/tours';
+import { destinationBySlug } from '../data/destinations';
+
+interface Props { lang: Lang; tour: Tour }
+const { lang, tour } = Astro.props;
+const t = useT(lang);
+const cities = tour.cities.map((c) => pick(destinationBySlug(c)!.name, lang)).join(' · ');
+---
+<article class="card tour-card" data-category={tour.category}>
+  <div class={`card-art art-${tour.category}`} aria-hidden="true"></div>
+  <div class="card-body">
+    <span class="tag">{t(`cat.${tour.category}`)}</span>
+    <h3><a href={href(lang, `tours/${tour.slug}`)}>{pick(tour.title, lang)}</a></h3>
+    <p>{pick(tour.summary, lang)}</p>
+    <p class="meta">{tour.days} {tour.days === 1 ? t('tours.day') : t('tours.days')} · {cities}</p>
+  </div>
+</article>

@@ -1,0 +1,28 @@
+---
+import Base from '../../layouts/Base.astro';
+import { pick, useT, langs, type Lang } from '../../i18n';
+import { services } from '../../data/services';
+import { whatsappLink } from '../../config';
+
+export const getStaticPaths = () => langs.map((lang) => ({ params: { lang } }));
+const lang = Astro.params.lang as Lang;
+const t = useT(lang);
+---
+<Base lang={lang} title={t('services.title')} description={t('services.intro')} path="services">
+  <section class="container page-head">
+    <h1>{t('services.title')}</h1>
+    <p class="lead">{t('services.intro')}</p>
+  </section>
+  <section class="container section-tight">
+    <div class="grid">
+      {services.map((s) => (
+        <article class="feature card-pad" id={s.slug}>
+          <span class="icon">{s.icon}</span>
+          <h3>{pick(s.title, lang)}</h3>
+          <p>{pick(s.text, lang)}</p>
+          <a href={whatsappLink(`${s.title.en}`)} target="_blank" rel="noopener">{t('cta.whatsapp')} <span class="arrow">→</span></a>
+        </article>
+      ))}
+    </div>
+  </section>
+</Base>

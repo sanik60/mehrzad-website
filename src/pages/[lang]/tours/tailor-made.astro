@@ -1,0 +1,58 @@
+---
+import Base from '../../../layouts/Base.astro';
+import { useT, langs, type Lang } from '../../../i18n';
+import { categories } from '../../../data/tours';
+import { site } from '../../../config';
+
+export const getStaticPaths = () => langs.map((lang) => ({ params: { lang } }));
+const lang = Astro.params.lang as Lang;
+const t = useT(lang);
+const labels = {
+  name: t('tailor.name'),
+  country: t('tailor.country'),
+  dates: t('tailor.dates'),
+  travellers: t('tailor.travellers'),
+  interests: t('tailor.interests'),
+  message: t('tailor.message'),
+};
+---
+<Base lang={lang} title={t('tailor.title')} description={t('tailor.intro')} path="tours/tailor-made">
+  <section class="container page-head narrow">
+    <h1>{t('tailor.title')}</h1>
+    <p class="lead">{t('tailor.intro')}</p>
+    <form id="tailor-form" class="form" data-wa={site.whatsapp} data-labels={JSON.stringify(labels)} data-heading={t('tailor.title')}>
+      <label>{labels.name}<input name="name" required autocomplete="name" /></label>
+      <label>{labels.country}<input name="country" autocomplete="country-name" /></label>
+      <div class="form-row">
+        <label>{labels.dates}<input name="dates" /></label>
+        <label>{labels.travellers}<input name="travellers" type="number" min="1" value="2" /></label>
+      </div>
+      <fieldset>
+        <legend>{labels.interests}</legend>
+        <div class="checks">
+          {categories.map((c) => <label class="check"><input type="checkbox" name="interests" value={t(`cat.${c}`)} />{t(`cat.${c}`)}</label>)}
+          <label class="check"><input type="checkbox" name="interests" value={t('nav.health')} />{t('nav.health')}</label>
+        </div>
+      </fieldset>
+      <label>{labels.message}<textarea name="message" rows="4"></textarea></label>
+      <button class="btn btn-wa" type="submit">{t('tailor.send')}</button>
+    </form>
+  </section>
+</Base>
+
+<script>
+  const form = document.getElementById('tailor-form') as HTMLFormElement;
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const data = new FormData(form);
+    const labels = JSON.parse(form.dataset.labels!);
+    const lines = [form.dataset.heading!];
+    for (const key of ['name', 'country', 'dates', 'travellers', 'message']) {
+      const v = String(data.get(key) ?? '').trim();
+      if (v) lines.push(`${labels[key]}: ${v}`);
+    }
+    const interests = data.getAll('interests').join(', ');
+    if (interests) lines.push(`${labels.interests}: ${interests}`);
+    window.open(`https://wa.me/${form.dataset.wa}?text=${encodeURIComponent(lines.join('\n'))}`, '_blank', 'noopener');
+  });
+</script>

@@ -1,0 +1,7 @@
+---
+import { useT, type Lang } from '../i18n';
+interface Props { lang: Lang; show: boolean }
+const { lang, show } = Astro.props;
+const t = useT(lang);
+---
+{show && <p class="notice">{t('translation.missing')}</p>}

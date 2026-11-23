@@ -1,0 +1,35 @@
+---
+import Base from '../../../layouts/Base.astro';
+import Notice from '../../../components/Notice.astro';
+import { href, useT, langs, type Lang } from '../../../i18n';
+import { postSlugs, getPost } from '../../../data/blog';
+import { site } from '../../../config';
+
+export const getStaticPaths = () =>
+  langs.flatMap((lang) => postSlugs.map((slug) => ({ params: { lang, slug } })));
+
+const lang = Astro.params.lang as Lang;
+const { post, translated } = getPost(Astro.params.slug!, lang)!;
+const t = useT(lang);
+const { Content } = post;
+const fmt = new Intl.DateTimeFormat(lang, { dateStyle: 'long' });
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: post.title,
+  description: post.description,
+  datePublished: post.date.toISOString(),
+  inLanguage: post.lang,
+  publisher: { '@type': 'Organization', name: site.brand },
+  mainEntityOfPage: new URL(href(lang, `blog/${post.slug}`), Astro.site).href,
+};
+---
+<Base lang={lang} title={post.title} description={post.description} path={`blog/${post.slug}`} schema={schema}>
+  <article class="container page-head narrow prose" lang={post.lang} dir={post.lang === 'fa' || post.lang === 'ar' ? 'rtl' : 'ltr'}>
+    <Notice lang={lang} show={!translated} />
+    <p class="meta"><a href={href(lang, 'blog')}><span class="arrow">←</span> {t('blog.title')}</a> · <time datetime={post.date.toISOString()}>{fmt.format(post.date)}</time></p>
+    <h1>{post.title}</h1>
+    <Content />
+  </article>
+</Base>

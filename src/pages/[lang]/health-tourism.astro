@@ -1,0 +1,53 @@
+---
+import Base from '../../layouts/Base.astro';
+import { pick, useT, langs, type Lang } from '../../i18n';
+import { treatments } from '../../data/services';
+import { site, whatsappLink } from '../../config';
+
+export const getStaticPaths = () => langs.map((lang) => ({ params: { lang } }));
+const lang = Astro.params.lang as Lang;
+const t = useT(lang);
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  serviceType: 'Medical tourism coordination',
+  provider: { '@type': 'TravelAgency', name: site.brand },
+  areaServed: { '@type': 'Country', name: 'Iran' },
+};
+---
+<Base lang={lang} title={t('health.title')} description={t('health.intro')} path="health-tourism" schema={schema}>
+  <section class="hero hero-health">
+    <div class="container">
+      <h1>{t('health.title')}</h1>
+      <p class="lead">{t('health.intro')}</p>
+      <a class="btn btn-wa" href={whatsappLink(t('health.title'))} target="_blank" rel="noopener">{t('cta.whatsapp')}</a>
+    </div>
+  </section>
+
+  <section class="container section">
+    <h2>{t('health.treatments')}</h2>
+    <div class="grid">
+      {treatments.map((s) => (
+        <article class="feature card-pad">
+          <span class="icon">{s.icon}</span>
+          <h3>{pick(s.title, lang)}</h3>
+          <p>{pick(s.text, lang)}</p>
+        </article>
+      ))}
+    </div>
+  </section>
+
+  <section class="band">
+    <div class="container section">
+      <h2>{t('health.how')}</h2>
+      <ol class="steps">
+        <li>{t('health.step1')}</li>
+        <li>{t('health.step2')}</li>
+        <li>{t('health.step3')}</li>
+        <li>{t('health.step4')}</li>
+      </ol>
+      <p class="notice">🔒 {t('health.secure')}</p>
+    </div>
+  </section>
+</Base>

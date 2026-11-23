@@ -1,0 +1,5 @@
+---
+interface Props { count: number }
+const { count } = Astro.props;
+---
+<span class="stars" aria-label={`${count} stars`}>{'★'.repeat(count)}</span>

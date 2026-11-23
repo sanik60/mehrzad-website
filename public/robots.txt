@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://sanik60.github.io/mehrzad-website/sitemap-index.xml

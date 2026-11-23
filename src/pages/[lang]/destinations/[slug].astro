@@ -1,0 +1,76 @@
+---
+import Base from '../../../layouts/Base.astro';
+import Notice from '../../../components/Notice.astro';
+import TourCard from '../../../components/TourCard.astro';
+import Stars from '../../../components/Stars.astro';
+import { href, pick, hasTranslation, useT, langs, type Lang } from '../../../i18n';
+import { destinations, emergency, type Destination } from '../../../data/destinations';
+import { hotels } from '../../../data/hotels';
+import { tours } from '../../../data/tours';
+
+export const getStaticPaths = () =>
+  langs.flatMap((lang) => destinations.map((d) => ({ params: { lang, slug: d.slug }, props: { d } })));
+
+const lang = Astro.params.lang as Lang;
+const { d } = Astro.props as { d: Destination };
+const t = useT(lang);
+const name = pick(d.name, lang);
+const summary = pick(d.summary, lang);
+const cityHotels = hotels.filter((h) => h.city === d.slug);
+const cityTours = tours.filter((x) => x.cities.includes(d.slug));
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'TouristDestination',
+  name: d.name.en,
+  description: d.summary.en,
+  containedInPlace: { '@type': 'Country', name: 'Iran' },
+  includesAttraction: d.sights.en.map((s) => ({ '@type': 'TouristAttraction', name: s })),
+};
+---
+<Base lang={lang} title={name} description={summary} path={`destinations/${d.slug}`} schema={schema}>
+  <div class={`detail-banner art-${d.slug}`}><div class="container"><h1>{name}</h1></div></div>
+  <article class="container page-head">
+    <Notice lang={lang} show={!hasTranslation(d.summary, lang)} />
+    <p class="lead">{summary}</p>
+
+    <div class="info-grid">
+      <section class="info-box">
+        <h2>✈️ {t('dest.gettingThere')}</h2>
+        <p><strong>{t('dest.airport')}:</strong> {pick(d.airport, lang)}</p>
+        {d.borders && <p><strong>{t('dest.borders')}:</strong> {pick(d.borders, lang)}</p>}
+      </section>
+      <section class="info-box info-emergency">
+        <h2>🚨 {t('dest.emergency')}</h2>
+        <ul class="plain">
+          <li>{t('dest.police')}: <a href={`tel:${emergency.police}`}>{emergency.police}</a></li>
+          <li>{t('dest.ambulance')}: <a href={`tel:${emergency.ambulance}`}>{emergency.ambulance}</a></li>
+          <li>{t('dest.fire')}: <a href={`tel:${emergency.fire}`}>{emergency.fire}</a></li>
+        </ul>
+      </section>
+      <section class="info-box">
+        <h2>🏛 {t('dest.sights')}</h2>
+        <ul class="checklist">{pick(d.sights, lang).map((s) => <li>{s}</li>)}</ul>
+      </section>
+    </div>
+
+    {cityHotels.length > 0 && (
+      <section class="section-tight">
+        <div class="section-head">
+          <h2>{t('dest.hotels')}</h2>
+          <a href={`${href(lang, 'hotels')}?city=${d.slug}`}>{t('cta.viewAll')} <span class="arrow">→</span></a>
+        </div>
+        <ul class="hotel-list">
+          {cityHotels.map((h) => <li><Stars count={h.stars} /> {pick(h.name, lang)}</li>)}
+        </ul>
+      </section>
+    )}
+
+    {cityTours.length > 0 && (
+      <section class="section-tight">
+        <h2>{t('dest.tours')}</h2>
+        <div class="grid">{cityTours.map((tour) => <TourCard lang={lang} tour={tour} />)}</div>
+      </section>
+    )}
+  </article>
+</Base>

@@ -1,0 +1,36 @@
+---
+import Base from '../../../layouts/Base.astro';
+import TourCard from '../../../components/TourCard.astro';
+import { href, useT, langs, type Lang } from '../../../i18n';
+import { tours, categories } from '../../../data/tours';
+
+export const getStaticPaths = () => langs.map((lang) => ({ params: { lang } }));
+const lang = Astro.params.lang as Lang;
+const t = useT(lang);
+---
+<Base lang={lang} title={t('tours.title')} description={t('tours.intro')} path="tours">
+  <section class="container page-head">
+    <h1>{t('tours.title')}</h1>
+    <p class="lead">{t('tours.intro')}</p>
+    <div class="chips" role="group" aria-label={t('tours.title')}>
+      <button type="button" class="chip" data-filter="all" aria-pressed="true">{t('tours.all')}</button>
+      {categories.map((c) => <button type="button" class="chip" data-filter={c} aria-pressed="false">{t(`cat.${c}`)}</button>)}
+      <a class="chip chip-accent" href={href(lang, 'tours/tailor-made')}>{t('cta.tailor')}</a>
+    </div>
+  </section>
+  <section class="container section-tight">
+    <div class="grid" id="tour-grid">{tours.map((tour) => <TourCard lang={lang} tour={tour} />)}</div>
+  </section>
+</Base>
+
+<script>
+  const chips = document.querySelectorAll<HTMLButtonElement>('.chip[data-filter]');
+  const cards = document.querySelectorAll<HTMLElement>('#tour-grid .tour-card');
+  chips.forEach((chip) =>
+    chip.addEventListener('click', () => {
+      const f = chip.dataset.filter;
+      chips.forEach((c) => c.setAttribute('aria-pressed', String(c === chip)));
+      cards.forEach((card) => (card.hidden = f !== 'all' && card.dataset.category !== f));
+    }),
+  );
+</script>

@@ -1,0 +1,11 @@
+---
+import Base from '../layouts/Base.astro';
+import { href, useT } from '../i18n';
+const t = useT('en');
+---
+<Base lang="en" title={t("notfound.title")} description={t("notfound.title")} noindex>
+  <section class="container page-head">
+    <h1>{t('notfound.title')}</h1>
+    <p><a class="btn" href={href('en')}>{t('notfound.back')}</a></p>
+  </section>
+</Base>

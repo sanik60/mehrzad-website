@@ -1,0 +1,84 @@
+---
+import Base from '../../layouts/Base.astro';
+import TourCard from '../../components/TourCard.astro';
+import { href, pick, useT, langs, type Lang } from '../../i18n';
+import { tours } from '../../data/tours';
+import { destinations } from '../../data/destinations';
+import { postsFor } from '../../data/blog';
+import { site, whatsappLink } from '../../config';
+
+export const getStaticPaths = () => langs.map((lang) => ({ params: { lang } }));
+const lang = Astro.params.lang as Lang;
+const t = useT(lang);
+const featured = tours.filter((x) => x.featured);
+const posts = postsFor(lang).slice(0, 3);
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'TravelAgency',
+  name: site.brand,
+  url: new URL(href(lang), Astro.site).href,
+  email: site.email,
+  areaServed: { '@type': 'Country', name: 'Iran' },
+  availableLanguage: ['en', 'fa', 'tr', 'ar', 'ru', 'de'],
+};
+---
+<Base lang={lang} title={t('home.title')} description={t('home.subtitle')} schema={schema}>
+  <section class="hero">
+    <div class="container">
+      <h1>{t('home.title')}</h1>
+      <p class="lead">{t('home.subtitle')}</p>
+      <div class="hero-actions">
+        <a class="btn" href={href(lang, 'tours')}>{t('nav.tours')}</a>
+        <a class="btn btn-light" href={href(lang, 'tours/tailor-made')}>{t('cta.tailor')}</a>
+        <a class="btn btn-wa" href={whatsappLink()} target="_blank" rel="noopener">{t('cta.whatsapp')}</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="container section">
+    <div class="section-head">
+      <h2>{t('home.featuredTours')}</h2>
+      <a href={href(lang, 'tours')}>{t('cta.viewAll')} <span class="arrow">→</span></a>
+    </div>
+    <div class="grid">{featured.map((tour) => <TourCard lang={lang} tour={tour} />)}</div>
+  </section>
+
+  <section class="band">
+    <div class="container section">
+      <h2>{t('home.why')}</h2>
+      <div class="grid">
+        <div class="feature"><span class="icon">🧭</span><h3>{t('home.why1.title')}</h3><p>{t('home.why1.text')}</p></div>
+        <div class="feature"><span class="icon">🛂</span><h3>{t('home.why2.title')}</h3><p>{t('home.why2.text')}</p></div>
+        <div class="feature"><span class="icon">💬</span><h3>{t('home.why3.title')}</h3><p>{t('home.why3.text')}</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="container section">
+    <div class="section-head">
+      <h2>{t('home.destinations')}</h2>
+      <a href={href(lang, 'destinations')}>{t('cta.viewAll')} <span class="arrow">→</span></a>
+    </div>
+    <div class="grid grid-dest">
+      {destinations.map((d) => (
+        <a class={`dest-tile art-${d.slug}`} href={href(lang, `destinations/${d.slug}`)}><span>{pick(d.name, lang)}</span></a>
+      ))}
+    </div>
+  </section>
+
+  <section class="container section">
+    <div class="section-head">
+      <h2>{t('home.latestPosts')}</h2>
+      <a href={href(lang, 'blog')}>{t('cta.viewAll')} <span class="arrow">→</span></a>
+    </div>
+    <div class="grid">
+      {posts.map((p) => (
+        <article class="card"><div class="card-body">
+          <h3><a href={href(lang, `blog/${p.slug}`)}>{p.title}</a></h3>
+          <p>{p.description}</p>
+        </div></article>
+      ))}
+    </div>
+  </section>
+</Base>

@@ -1,0 +1,30 @@
+---
+import Base from '../../layouts/Base.astro';
+import { href, useT, langs, type Lang } from '../../i18n';
+import { site, whatsappLink } from '../../config';
+
+export const getStaticPaths = () => langs.map((lang) => ({ params: { lang } }));
+const lang = Astro.params.lang as Lang;
+const t = useT(lang);
+---
+<Base lang={lang} title={t('contact.title')} description={t('contact.text')} path="contact">
+  <section class="container page-head narrow">
+    <h1>{t('contact.title')}</h1>
+    <p class="lead">{t('contact.text')}</p>
+    <div class="info-grid">
+      <div class="info-box">
+        <h2>💬 WhatsApp</h2>
+        <p dir="ltr">+{site.whatsapp}</p>
+        <a class="btn btn-wa" href={whatsappLink()} target="_blank" rel="noopener">{t('cta.whatsapp')}</a>
+      </div>
+      <div class="info-box">
+        <h2>✉️ {t('contact.email')}</h2>
+        <p><a href={`mailto:${site.email}`}>{site.email}</a></p>
+      </div>
+      <div class="info-box">
+        <h2>🗺 {t('cta.tailor')}</h2>
+        <a class="btn btn-light" href={href(lang, 'tours/tailor-made')}>{t('tailor.title')}</a>
+      </div>
+    </div>
+  </section>
+</Base>

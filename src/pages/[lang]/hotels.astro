@@ -1,0 +1,104 @@
+---
+import Base from '../../layouts/Base.astro';
+import Stars from '../../components/Stars.astro';
+import { href, pick, useT, langs, type Lang } from '../../i18n';
+import { hotels, amenities } from '../../data/hotels';
+import { destinations, destinationBySlug } from '../../data/destinations';
+import { site, whatsappLink } from '../../config';
+
+export const getStaticPaths = () => langs.map((lang) => ({ params: { lang } }));
+const lang = Astro.params.lang as Lang;
+const t = useT(lang);
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  itemListElement: hotels.map((h, i) => ({
+    '@type': 'ListItem',
+    position: i + 1,
+    item: {
+      '@type': 'Hotel',
+      name: h.name.en,
+      starRating: { '@type': 'Rating', ratingValue: h.stars },
+      address: { '@type': 'PostalAddress', addressLocality: destinationBySlug(h.city)!.name.en, addressCountry: 'IR' },
+    },
+  })),
+};
+---
+<Base lang={lang} title={t('hotels.title')} description={t('hotels.intro')} path="hotels" schema={schema}>
+  <section class="container page-head">
+    <h1>{t('hotels.title')}</h1>
+    <p class="lead">{t('hotels.intro')}</p>
+  </section>
+
+  <section class="container section-tight hotels-layout">
+    <form class="filters" id="hotel-filters">
+      <label>{t('hotels.city')}
+        <select name="city">
+          <option value="">{t('hotels.any')}</option>
+          {destinations.map((d) => <option value={d.slug}>{pick(d.name, lang)}</option>)}
+        </select>
+      </label>
+      <label>{t('hotels.stars')}
+        <select name="stars">
+          <option value="">{t('hotels.any')}</option>
+          <option value="5">★★★★★</option>
+          <option value="4">★★★★+</option>
+          <option value="3">★★★+</option>
+        </select>
+      </label>
+      <fieldset>
+        <legend>{t('hotels.amenities')}</legend>
+        {amenities.map((a) => <label class="check"><input type="checkbox" name="amenity" value={a} />{t(`amenity.${a}`)}</label>)}
+      </fieldset>
+    </form>
+
+    <div>
+      <div class="grid" id="hotel-grid">
+        {hotels.map((h) => (
+          <article class="card hotel-card" data-city={h.city} data-stars={h.stars} data-amenities={h.amenities.join(' ')}>
+            <div class={`card-art art-${h.city}`} aria-hidden="true"></div>
+            <div class="card-body">
+              <Stars count={h.stars} />
+              <h3>{pick(h.name, lang)}</h3>
+              <p class="meta">📍 <a href={href(lang, `destinations/${h.city}`)}>{pick(destinationBySlug(h.city)!.name, lang)}</a></p>
+              <ul class="amenities">{h.amenities.map((a) => <li>{t(`amenity.${a}`)}</li>)}</ul>
+              <a class="btn btn-wa btn-sm" href={whatsappLink(`${t('hotels.title')}: ${h.name.en}`)} target="_blank" rel="noopener">{t('cta.whatsapp')}</a>
+            </div>
+          </article>
+        ))}
+      </div>
+      <p id="hotel-empty" class="notice" hidden>{t('hotels.none')}</p>
+    </div>
+  </section>
+</Base>
+
+<script>
+  const form = document.getElementById('hotel-filters') as HTMLFormElement;
+  const cards = document.querySelectorAll<HTMLElement>('.hotel-card');
+  const empty = document.getElementById('hotel-empty')!;
+  const apply = () => {
+    const data = new FormData(form);
+    const city = String(data.get('city') || '');
+    const stars = Number(data.get('stars') || 0);
+    const wanted = data.getAll('amenity').map(String);
+    let shown = 0;
+    cards.forEach((card) => {
+      const has = card.dataset.amenities!.split(' ');
+      const ok =
+        (!city || card.dataset.city === city) &&
+        Number(card.dataset.stars) >= stars &&
+        wanted.every((a) => has.includes(a));
+      card.hidden = !ok;
+      if (ok) shown++;
+    });
+    empty.hidden = shown > 0;
+  };
+  form.addEventListener('change', apply);
+  // Allow links like hotels/?city=isfahan
+  const city = new URLSearchParams(location.search).get('city');
+  if (city) {
+    (form.elements.namedItem('city') as HTMLSelectElement).value = city;
+    apply();
+  }
+</script>

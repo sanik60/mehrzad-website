@@ -1,0 +1,29 @@
+---
+import Base from '../../../layouts/Base.astro';
+import { href, useT, langs, type Lang } from '../../../i18n';
+import { postsFor } from '../../../data/blog';
+
+export const getStaticPaths = () => langs.map((lang) => ({ params: { lang } }));
+const lang = Astro.params.lang as Lang;
+const t = useT(lang);
+const posts = postsFor(lang);
+const fmt = new Intl.DateTimeFormat(lang, { dateStyle: 'long' });
+---
+<Base lang={lang} title={t('blog.title')} description={t('blog.intro')} path="blog">
+  <section class="container page-head">
+    <h1>{t('blog.title')}</h1>
+    <p class="lead">{t('blog.intro')}</p>
+  </section>
+  <section class="container section-tight">
+    <div class="grid">
+      {posts.map((p) => (
+        <article class="card"><div class="card-body">
+          <p class="meta"><time datetime={p.date.toISOString()}>{fmt.format(p.date)}</time></p>
+          <h3><a href={href(lang, `blog/${p.slug}`)}>{p.title}</a></h3>
+          <p>{p.description}</p>
+          <a href={href(lang, `blog/${p.slug}`)}>{t('cta.readMore')} <span class="arrow">→</span></a>
+        </div></article>
+      ))}
+    </div>
+  </section>
+</Base>
