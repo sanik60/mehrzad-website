@@ -1,5 +1,6 @@
 ---
 import Base from '../../../layouts/Base.astro';
+import Art from '../../../components/Art.astro';
 import Notice from '../../../components/Notice.astro';
 import { href, useT, langs, type Lang } from '../../../i18n';
 import { postSlugs, getPost } from '../../../data/blog';
@@ -26,6 +27,7 @@ const schema = {
 };
 ---
 <Base lang={lang} title={post.title} description={post.description} path={`blog/${post.slug}`} schema={schema}>
+  {post.image && <Art banner art="blog" image={post.image} alt={post.title} />}
   <article class="container page-head narrow prose" lang={post.lang} dir={post.lang === 'fa' || post.lang === 'ar' ? 'rtl' : 'ltr'}>
     <Notice lang={lang} show={!translated} />
     <p class="meta"><a href={href(lang, 'blog')}><span class="arrow">←</span> {t('blog.title')}</a> · <time datetime={post.date.toISOString()}>{fmt.format(post.date)}</time></p>

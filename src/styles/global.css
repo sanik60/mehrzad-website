@@ -151,7 +151,7 @@ h3 { font-size: 1.15rem; }
 .card h3 { margin: 0; }
 .card h3 a { color: var(--ink); text-decoration: none; }
 .card h3 a:hover { color: var(--brand); }
-.card-art { height: 120px; }
+.card-art { aspect-ratio: 16 / 10; }
 .card-pad { padding: 22px; border: 1px solid var(--line); border-radius: var(--radius); background: #fff; }
 .tag { align-self: flex-start; display: inline-block; font-size: 0.8rem; font-weight: 600; background: #e6f2f1; color: var(--brand); padding: 3px 10px; border-radius: 999px; }
 .feature .icon { font-size: 1.8rem; display: block; margin-bottom: 6px; }
@@ -181,7 +181,7 @@ h3 { font-size: 1.15rem; }
 .art-combined, .art-tabriz { background: linear-gradient(135deg, #6b3f2a, #b5754f 55%, #f0c987); }
 .art-leisure, .art-shiraz { background: linear-gradient(135deg, #7a2e4d, #c1567a 55%, #f6b6a0); }
 .art-day, .art-yazd { background: linear-gradient(135deg, #a5642b, #d9a55b 55%, #f4dfb4); }
-.detail-banner { min-height: 160px; display: flex; align-items: flex-end; padding-block: 24px; color: #fff; text-shadow: 0 1px 6px rgb(0 0 0 / 40%); }
+.detail-banner { min-height: clamp(200px, 38vw, 440px); display: flex; align-items: flex-end; padding-block: 24px; color: #fff; text-shadow: 0 1px 6px rgb(0 0 0 / 40%); }
 .detail-banner h1 { margin: 0; }
 
 /* Chips (tour filter) */
@@ -275,5 +275,93 @@ label.check input { width: auto; }
 .rtl .arrow { display: inline-block; transform: scaleX(-1); }
 /* Untranslated (English) text on RTL pages keeps its own direction and punctuation. */
 .rtl :is(p, li, dd, h1, h2, h3, blockquote) { unicode-bidi: plaintext; }
-.has-photo { background-size: cover; background-position: center; background-color: var(--soft); }
-.detail-banner.has-photo { box-shadow: inset 0 -80px 80px -40px rgb(0 0 0 / 45%); }
+
+/* ---------- Photos ---------- */
+.has-photo { position: relative; overflow: hidden; background: var(--soft); }
+.has-photo > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block; }
+.card-art.has-photo > img { transition: transform 0.4s ease; }
+.card:hover .card-art.has-photo > img { transform: scale(1.04); }
+.detail-banner { position: relative; }
+.detail-banner.has-photo::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgb(0 0 0 / 55%), rgb(0 0 0 / 0%) 60%);
+}
+.detail-banner > .container { position: relative; z-index: 1; }
+.art-fill { position: absolute; inset: 0; }
+.art-blog { background: linear-gradient(135deg, #39587a, #7fb3d5); }
+
+/* Hero with a background photo */
+.hero { position: relative; overflow: hidden; }
+.hero > .container { position: relative; z-index: 1; }
+.hero:has(.art-fill.has-photo) {
+  background: #12323a;
+  padding-block: clamp(80px, 14vw, 160px);
+}
+.hero .art-fill.has-photo::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(100deg, rgb(8 40 45 / 72%) 0%, rgb(8 40 45 / 38%) 55%, rgb(8 40 45 / 5%) 100%);
+}
+.rtl .hero .art-fill.has-photo::after {
+  background: linear-gradient(260deg, rgb(8 40 45 / 72%) 0%, rgb(8 40 45 / 38%) 55%, rgb(8 40 45 / 5%) 100%);
+}
+.hero h1, .hero .lead { text-shadow: 0 1px 12px rgb(0 0 0 / 35%); }
+
+/* Destination tiles with photos */
+.dest-tile { overflow: hidden; isolation: isolate; aspect-ratio: 4 / 3; min-height: 0; }
+.dest-tile .art-fill { z-index: -1; }
+.dest-tile .art-fill::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgb(0 0 0 / 60%), rgb(0 0 0 / 0%) 55%);
+}
+.dest-tile .art-fill > img { transition: transform 0.4s ease; }
+.dest-tile:hover .art-fill > img { transform: scale(1.06); }
+
+/* Credits page */
+.credits { display: grid; gap: 16px; grid-template-columns: repeat(auto-fill, minmax(min(100%, 280px), 1fr)); margin-top: 24px; }
+.credits figure { margin: 0; border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; background: #fff; }
+.credits figcaption { padding: 12px 14px; font-size: 0.85rem; color: var(--muted); overflow-wrap: anywhere; }
+.credits figcaption strong { color: var(--ink); display: block; }
+
+/* ---------- Responsive refinements ---------- */
+/* Grids never force a column wider than small phones (320px). */
+.grid { grid-template-columns: repeat(auto-fill, minmax(min(100%, 260px), 1fr)); }
+.grid-dest { grid-template-columns: repeat(auto-fill, minmax(min(100%, 150px), 1fr)); }
+@media (max-width: 480px) {
+  .grid-dest { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+  .section { padding-block: 36px; }
+  .hero-actions .btn { flex: 1 1 100%; justify-content: center; }
+  .wa-float { width: 50px; height: 50px; inset-inline-end: 12px; bottom: 12px; }
+  .facts { flex-direction: column; }
+}
+/* Tablets: menu has room for a two-column layout. */
+@media (min-width: 640px) and (max-width: 999px) {
+  .nav-toggle:checked ~ .main-nav > ul { columns: 2; }
+}
+/* Wide screens: keep line lengths readable. */
+@media (min-width: 1600px) {
+  html { font-size: 17px; }
+  .container { width: min(1280px, 100% - 64px); }
+}
+/* Phones in landscape and very short screens: hero does not fill everything. */
+@media (max-height: 500px) and (orientation: landscape) {
+  .hero:has(.art-fill.has-photo) { padding-block: 48px; }
+  .detail-banner { min-height: 180px; }
+}
+/* Respect reduced-motion settings. */
+@media (prefers-reduced-motion: reduce) {
+  * { transition: none !important; }
+}
+img { max-width: 100%; }
+
+/* Card rows stretch to fill the width instead of leaving an empty column;
+   filterable lists keep fixed columns so a single result is not huge. */
+.grid { grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr)); }
+#tour-grid, #hotel-grid, .credits { grid-template-columns: repeat(auto-fill, minmax(min(100%, 260px), 1fr)); }
+.grid-dest { grid-template-columns: repeat(auto-fit, minmax(min(100%, 150px), 1fr)); }
+@media (max-width: 480px) { .grid-dest { grid-template-columns: repeat(2, 1fr); } }

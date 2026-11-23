@@ -1,11 +1,36 @@
 ---
 import Base from '../layouts/Base.astro';
-import { href, useT } from '../i18n';
+import { href, langs, languages, useT } from '../i18n';
+
+// GitHub Pages serves this one page for every missing URL, so the text is
+// switched in the browser to match the language in the address.
 const t = useT('en');
+const strings = Object.fromEntries(
+  langs.map((l) => {
+    const tl = useT(l);
+    return [l, { title: tl('notfound.title'), back: tl('notfound.back'), href: href(l), dir: languages[l].dir }];
+  }),
+);
 ---
-<Base lang="en" title={t("notfound.title")} description={t("notfound.title")} noindex>
-  <section class="container page-head">
+<Base lang="en" title={t('notfound.title')} description={t('notfound.title')} noindex>
+  <section class="container page-head" id="nf" data-strings={JSON.stringify(strings)}>
     <h1>{t('notfound.title')}</h1>
     <p><a class="btn" href={href('en')}>{t('notfound.back')}</a></p>
   </section>
 </Base>
+
+<script>
+  const box = document.getElementById('nf')!;
+  const strings = JSON.parse(box.dataset.strings!);
+  const lang = Object.keys(strings).find((l) => location.pathname.includes(`/${l}/`));
+  if (lang && lang !== 'en') {
+    const s = strings[lang];
+    box.querySelector('h1')!.textContent = s.title;
+    const a = box.querySelector('a')!;
+    a.textContent = s.back;
+    a.href = s.href;
+    box.setAttribute('lang', lang);
+    box.setAttribute('dir', s.dir);
+    document.title = s.title;
+  }
+</script>

@@ -1,0 +1,38 @@
+---
+import Base from '../../layouts/Base.astro';
+import { useT, langs, type Lang } from '../../i18n';
+import credits from '../../content/photo-credits.json';
+
+export const getStaticPaths = () => langs.map((lang) => ({ params: { lang } }));
+const lang = Astro.params.lang as Lang;
+const t = useT(lang);
+
+interface Credit {
+  image: string;
+  title: string;
+  page: string;
+  artist: string;
+  license: string;
+  licenseUrl: string;
+}
+const list = credits as Credit[];
+const thumb = (src: string) => src.replace(/-1600\.webp$/, '-480.webp');
+---
+<Base lang={lang} title={t('credits.title')} description={t('credits.intro')} path="credits">
+  <section class="container page-head">
+    <h1>{t('credits.title')}</h1>
+    <p class="lead">{t('credits.intro')}</p>
+    <div class="credits" dir="ltr">
+      {list.map((c) => (
+        <figure>
+          <div class="card-art has-photo"><img src={thumb(c.image)} alt="" loading="lazy" decoding="async" /></div>
+          <figcaption>
+            <strong><a href={c.page} target="_blank" rel="noopener">{c.title.replace(/^File:/, '').replace(/\.[a-z]+$/i, '')}</a></strong>
+            {t('credits.photo')}: {c.artist || 'Unknown'} ·{' '}
+            {c.licenseUrl ? <a href={c.licenseUrl} target="_blank" rel="noopener license">{c.license}</a> : c.license}
+          </figcaption>
+        </figure>
+      ))}
+    </div>
+  </section>
+</Base>

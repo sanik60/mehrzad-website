@@ -1,6 +1,7 @@
 ---
 import Base from '../../layouts/Base.astro';
 import TourCard from '../../components/TourCard.astro';
+import Art from '../../components/Art.astro';
 import { href, pick, useT, langs, type Lang } from '../../i18n';
 import { tours } from '../../data/tours';
 import { destinations } from '../../data/destinations';
@@ -25,6 +26,7 @@ const schema = {
 ---
 <Base lang={lang} title={t('home.title')} description={t('home.subtitle')} schema={schema}>
   <section class="hero">
+    {site.heroImage && <Art fill eager art="hero" image={site.heroImage} />}
     <div class="container">
       <h1>{t('home.title')}</h1>
       <p class="lead">{t('home.subtitle')}</p>
@@ -62,7 +64,7 @@ const schema = {
     </div>
     <div class="grid grid-dest">
       {destinations.map((d) => (
-        <a class={`dest-tile art-${d.slug}`} href={href(lang, `destinations/${d.slug}`)}><span>{pick(d.name, lang)}</span></a>
+        <a class="dest-tile" href={href(lang, `destinations/${d.slug}`)}><Art fill art={d.slug} image={d.image} sizes="(min-width: 1180px) 190px, (min-width: 640px) 33vw, 50vw" /><span>{pick(d.name, lang)}</span></a>
       ))}
     </div>
   </section>
@@ -74,7 +76,7 @@ const schema = {
     </div>
     <div class="grid">
       {posts.map((p) => (
-        <article class="card"><div class="card-body">
+        <article class="card">{p.image && <Art art="blog" image={p.image} alt={p.title} />}<div class="card-body">
           <h3><a href={href(lang, `blog/${p.slug}`)}>{p.title}</a></h3>
           <p>{p.description}</p>
         </div></article>

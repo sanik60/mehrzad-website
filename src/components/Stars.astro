@@ -1,5 +1,8 @@
 ---
-interface Props { count: number }
-const { count } = Astro.props;
+import { useT, type Lang } from '../i18n';
+interface Props { count: number | string; lang: Lang }
+const { count, lang } = Astro.props;
+const n = Number(count);
+const label = useT(lang)('a11y.stars').replace('{n}', String(n));
 ---
-<span class="stars" aria-label={`${count} stars`}>{'★'.repeat(count)}</span>
+<span class="stars" role="img" aria-label={label}>{'★'.repeat(n)}</span>

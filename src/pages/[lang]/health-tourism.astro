@@ -1,5 +1,6 @@
 ---
 import Base from '../../layouts/Base.astro';
+import Art from '../../components/Art.astro';
 import { pick, useT, langs, type Lang } from '../../i18n';
 import { treatments } from '../../data/services';
 import { site, whatsappLink } from '../../config';
@@ -18,6 +19,7 @@ const schema = {
 ---
 <Base lang={lang} title={t('health.title')} description={t('health.intro')} path="health-tourism" schema={schema}>
   <section class="hero hero-health">
+    {site.healthImage && <Art fill eager art="health" image={site.healthImage} />}
     <div class="container">
       <h1>{t('health.title')}</h1>
       <p class="lead">{t('health.intro')}</p>

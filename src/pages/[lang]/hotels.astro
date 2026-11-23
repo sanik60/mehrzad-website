@@ -58,9 +58,9 @@ const schema = {
       <div class="grid" id="hotel-grid">
         {hotels.map((h) => (
           <article class="card hotel-card" data-city={h.city} data-stars={h.stars} data-amenities={h.amenities.join(' ')}>
-            <Art art={h.city} image={h.image} alt={pick(h.name, lang)} />
+            <Art art={h.city} image={h.image || destinationBySlug(h.city)?.image} alt={pick(h.name, lang)} />
             <div class="card-body">
-              <Stars count={h.stars} />
+              <Stars count={h.stars} lang={lang} />
               <h3>{pick(h.name, lang)}</h3>
               <p class="meta">📍 <a href={href(lang, `destinations/${h.city}`)}>{pick(destinationBySlug(h.city)!.name, lang)}</a></p>
               <ul class="amenities">{h.amenities.map((a) => <li>{t(`amenity.${a}`)}</li>)}</ul>

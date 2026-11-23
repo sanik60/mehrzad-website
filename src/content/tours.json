@@ -12,11 +12,19 @@
     "featured": true,
     "title": {
       "en": "Classic Persia",
-      "fa": "ایران کلاسیک"
+      "fa": "ایران کلاسیک",
+      "tr": "Klasik Pers",
+      "ar": "بلاد فارس الكلاسيكية",
+      "ru": "Классическая Персия",
+      "de": "Klassisches Persien"
     },
     "summary": {
       "en": "The essential route through four historic cities, from the Golestan Palace to Persepolis.",
-      "fa": "مسیر اصلی از میان چهار شهر تاریخی؛ از کاخ گلستان تا تخت جمشید."
+      "fa": "مسیر اصلی از میان چهار شهر تاریخی؛ از کاخ گلستان تا تخت جمشید.",
+      "tr": "Golestan Sarayı'ndan Persepolis'e, dört tarihi şehirden geçen temel rota.",
+      "ar": "المسار الأساسي عبر أربع مدن تاريخية، من قصر كلستان إلى برسبوليس.",
+      "ru": "Главный маршрут по четырём историческим городам — от дворца Голестан до Персеполя.",
+      "de": "Die klassische Route durch vier historische Städte – vom Golestan-Palast bis Persepolis."
     },
     "highlights": {
       "en": [
@@ -30,8 +38,33 @@
         "میدان نقش جهان اصفهان",
         "بافت تاریخی و بادگیرهای یزد",
         "تخت جمشید و باغ‌های شیراز"
+      ],
+      "tr": [
+        "Tahran'da Golestan Sarayı",
+        "İsfahan'da Nakş-ı Cihan Meydanı",
+        "Yezd'in eski şehri ve rüzgâr kuleleri",
+        "Persepolis ve Şiraz bahçeleri"
+      ],
+      "ar": [
+        "قصر كلستان في طهران",
+        "ميدان نقش جهان في أصفهان",
+        "المدينة القديمة وأبراج الرياح في يزد",
+        "برسبوليس وحدائق شيراز"
+      ],
+      "ru": [
+        "Дворец Голестан в Тегеране",
+        "Площадь Накш-е Джахан в Исфахане",
+        "Старый город и ветряные башни Йезда",
+        "Персеполь и сады Шираза"
+      ],
+      "de": [
+        "Golestan-Palast in Teheran",
+        "Naqsch-e-Dschahan-Platz in Isfahan",
+        "Altstadt und Windtürme von Yazd",
+        "Persepolis und die Gärten von Schiras"
       ]
-    }
+    },
+    "image": "/mehrzad-website/images/photos/tour-classic-persia-1600.webp"
   },
   {
     "slug": "dizin-ski-week",
@@ -43,11 +76,19 @@
     "featured": true,
     "title": {
       "en": "Dizin Ski Week",
-      "fa": "هفته اسکی دیزین"
+      "fa": "هفته اسکی دیزین",
+      "tr": "Dizin Kayak Haftası",
+      "ar": "أسبوع التزلج في ديزين",
+      "ru": "Горнолыжная неделя в Дизине",
+      "de": "Skiwoche in Dizin"
     },
     "summary": {
       "en": "Powder snow at one of the highest ski resorts in Asia, about three hours from Tehran.",
-      "fa": "برف پودری در یکی از مرتفع‌ترین پیست‌های آسیا، حدود سه ساعت از تهران."
+      "fa": "برف پودری در یکی از مرتفع‌ترین پیست‌های آسیا، حدود سه ساعت از تهران.",
+      "tr": "Tahran'a yaklaşık üç saat mesafede, Asya'nın en yüksek kayak merkezlerinden birinde toz kar.",
+      "ar": "ثلج ناعم في أحد أعلى منتجعات التزلج في آسيا، على بعد نحو ثلاث ساعات من طهران.",
+      "ru": "Пушистый снег на одном из самых высокогорных курортов Азии, примерно в трёх часах от Тегерана.",
+      "de": "Pulverschnee in einem der höchstgelegenen Skigebiete Asiens, etwa drei Stunden von Teheran entfernt."
     },
     "highlights": {
       "en": [
@@ -61,6 +102,30 @@
         "یک روز اختیاری در شمشک",
         "اجاره تجهیزات و مربی",
         "ترانسفر اختصاصی از تهران"
+      ],
+      "tr": [
+        "Dizin pistlerinde beş gün",
+        "İsteğe bağlı Şemşek günü",
+        "Ekipman kiralama ve eğitmenler",
+        "Tahran'dan özel transferler"
+      ],
+      "ar": [
+        "خمسة أيام على منحدرات ديزين",
+        "يوم اختياري في شمشك",
+        "تأجير المعدات ومدربون",
+        "تنقلات خاصة من طهران"
+      ],
+      "ru": [
+        "Пять дней катания в Дизине",
+        "По желанию — день в Шемшаке",
+        "Прокат снаряжения и инструкторы",
+        "Индивидуальные трансферы из Тегерана"
+      ],
+      "de": [
+        "Fünf Tage auf den Pisten von Dizin",
+        "Optionaler Tag in Schemschak",
+        "Ausrüstungsverleih und Skilehrer",
+        "Private Transfers ab Teheran"
       ]
     }
   },
@@ -74,11 +139,19 @@
     "featured": true,
     "title": {
       "en": "Mashhad Pilgrimage",
-      "fa": "زیارت مشهد"
+      "fa": "زیارت مشهد",
+      "tr": "Meşhed Ziyareti",
+      "ar": "زيارة مشهد",
+      "ru": "Паломничество в Мешхед",
+      "de": "Pilgerreise nach Maschhad"
     },
     "summary": {
       "en": "A calm, well-organised pilgrimage with a hotel near the Imam Reza Shrine.",
-      "fa": "سفری زیارتی آرام و منظم با هتلی نزدیک حرم امام رضا (ع)."
+      "fa": "سفری زیارتی آرام و منظم با هتلی نزدیک حرم امام رضا (ع).",
+      "tr": "İmam Rıza Türbesi'ne yakın bir otelde huzurlu ve iyi organize edilmiş bir ziyaret.",
+      "ar": "زيارة هادئة ومنظمة مع فندق قريب من حرم الإمام الرضا (ع).",
+      "ru": "Спокойное, хорошо организованное паломничество с отелем рядом с мавзолеем имама Резы.",
+      "de": "Eine ruhige, gut organisierte Pilgerreise mit Hotel nahe dem Imam-Reza-Schrein."
     },
     "highlights": {
       "en": [
@@ -92,6 +165,30 @@
         "بازدید راهنمادار از مجموعه حرم",
         "آرامگاه فردوسی در توس",
         "ترانسفر فرودگاهی"
+      ],
+      "tr": [
+        "Türbeye yürüme mesafesinde otel",
+        "Türbe kompleksine rehberli ziyaret",
+        "Tus'ta Firdevsi'nin Türbesi",
+        "Havalimanı transferleri"
+      ],
+      "ar": [
+        "فندق على مسافة قريبة سيرًا من الحرم",
+        "زيارة مع مرشد لمجمع الحرم",
+        "ضريح الفردوسي في طوس",
+        "التنقل من المطار وإليه"
+      ],
+      "ru": [
+        "Отель в шаговой доступности от святыни",
+        "Экскурсия по комплексу святыни",
+        "Мавзолей Фирдоуси в Тусе",
+        "Трансферы из аэропорта и обратно"
+      ],
+      "de": [
+        "Hotel in Gehweite zum Schrein",
+        "Geführter Besuch des Schreinkomplexes",
+        "Grabmal von Ferdowsi in Tus",
+        "Flughafentransfers"
       ]
     }
   },
@@ -105,11 +202,19 @@
     ],
     "title": {
       "en": "Silk Road North-West",
-      "fa": "جاده ابریشم شمال‌غرب"
+      "fa": "جاده ابریشم شمال‌غرب",
+      "tr": "Kuzeybatı İpek Yolu",
+      "ar": "طريق الحرير في الشمال الغربي",
+      "ru": "Шёлковый путь: северо-запад",
+      "de": "Seidenstraße im Nordwesten"
     },
     "summary": {
       "en": "Enter overland from Turkey or Azerbaijan and follow the old caravan route to Tehran.",
-      "fa": "ورود زمینی از ترکیه یا آذربایجان و دنبال کردن مسیر کاروان‌ها تا تهران."
+      "fa": "ورود زمینی از ترکیه یا آذربایجان و دنبال کردن مسیر کاروان‌ها تا تهران.",
+      "tr": "Türkiye veya Azerbaycan'dan karayoluyla girin ve eski kervan yolunu Tahran'a kadar izleyin.",
+      "ar": "ادخل برًا من تركيا أو أذربيجان واتبع طريق القوافل القديم حتى طهران.",
+      "ru": "Въезд по суше из Турции или Азербайджана и путь по старому караванному маршруту до Тегерана.",
+      "de": "Einreise auf dem Landweg aus der Türkei oder Aserbaidschan und auf der alten Karawanenroute bis Teheran."
     },
     "highlights": {
       "en": [
@@ -123,6 +228,30 @@
         "روستای صخره‌ای کندوان",
         "کلیساهای ارمنی نزدیک جلفا",
         "موزه‌های تهران"
+      ],
+      "tr": [
+        "Tebriz Tarihi Çarşısı",
+        "Kayalara oyulmuş Kandovan köyü",
+        "Culfa yakınlarındaki Ermeni manastırları",
+        "Tahran müzeleri"
+      ],
+      "ar": [
+        "بازار تبريز التاريخي",
+        "قرية كندوان الصخرية",
+        "الأديرة الأرمنية قرب جلفا",
+        "متاحف طهران"
+      ],
+      "ru": [
+        "Исторический базар Тебриза",
+        "Скальная деревня Кандован",
+        "Армянские монастыри близ Джульфы",
+        "Музеи Тегерана"
+      ],
+      "de": [
+        "Historischer Basar von Täbris",
+        "Felsendorf Kandovan",
+        "Armenische Klöster bei Dscholfa",
+        "Museen von Teheran"
       ]
     }
   },
@@ -135,11 +264,19 @@
     ],
     "title": {
       "en": "Shiraz Gardens & Poetry",
-      "fa": "باغ‌ها و شعر شیراز"
+      "fa": "باغ‌ها و شعر شیراز",
+      "tr": "Şiraz: Bahçeler ve Şiir",
+      "ar": "شيراز: الحدائق والشعر",
+      "ru": "Шираз: сады и поэзия",
+      "de": "Schiras: Gärten & Poesie"
     },
     "summary": {
       "en": "A slow-paced week of gardens, poetry, food and evening walks.",
-      "fa": "هفته‌ای آرام با باغ‌ها، شعر، غذا و پیاده‌روی‌های شبانه."
+      "fa": "هفته‌ای آرام با باغ‌ها، شعر، غذا و پیاده‌روی‌های شبانه.",
+      "tr": "Bahçeler, şiir, yemek ve akşam yürüyüşleriyle dolu sakin bir hafta.",
+      "ar": "أسبوع هادئ من الحدائق والشعر والطعام ونزهات المساء.",
+      "ru": "Неспешная неделя садов, поэзии, вкусной еды и вечерних прогулок.",
+      "de": "Eine entspannte Woche mit Gärten, Poesie, gutem Essen und Abendspaziergängen."
     },
     "highlights": {
       "en": [
@@ -153,6 +290,30 @@
         "آرامگاه حافظ و سعدی",
         "کلاس آشپزی با یک خانواده محلی",
         "سفر یک‌روزه به تخت جمشید"
+      ],
+      "tr": [
+        "Eram Bahçesi",
+        "Hafız ve Sadi'nin türbeleri",
+        "Yerel bir aileyle yemek kursu",
+        "Persepolis'e günübirlik gezi"
+      ],
+      "ar": [
+        "حديقة إرم",
+        "ضريحا حافظ وسعدي",
+        "درس طبخ مع عائلة محلية",
+        "رحلة يومية إلى برسبوليس"
+      ],
+      "ru": [
+        "Сад Эрам",
+        "Гробницы Хафиза и Саади",
+        "Кулинарный мастер-класс в местной семье",
+        "Однодневная поездка в Персеполь"
+      ],
+      "de": [
+        "Eram-Garten",
+        "Grabmäler von Hafis und Saadi",
+        "Kochkurs bei einer einheimischen Familie",
+        "Tagesausflug nach Persepolis"
       ]
     }
   },
@@ -165,11 +326,19 @@
     ],
     "title": {
       "en": "Tehran in a Day",
-      "fa": "تهران در یک روز"
+      "fa": "تهران در یک روز",
+      "tr": "Bir Günde Tahran",
+      "ar": "طهران في يوم واحد",
+      "ru": "Тегеран за один день",
+      "de": "Teheran an einem Tag"
     },
     "summary": {
       "en": "Palaces, the bazaar and the National Museum with a private guide.",
-      "fa": "کاخ‌ها، بازار و موزه ملی با راهنمای اختصاصی."
+      "fa": "کاخ‌ها، بازار و موزه ملی با راهنمای اختصاصی.",
+      "tr": "Özel rehberle saraylar, çarşı ve Ulusal Müze.",
+      "ar": "القصور والبازار والمتحف الوطني مع مرشد خاص.",
+      "ru": "Дворцы, базар и Национальный музей с личным гидом.",
+      "de": "Paläste, der Basar und das Nationalmuseum mit privatem Reiseleiter."
     },
     "highlights": {
       "en": [
@@ -183,6 +352,30 @@
         "بازار بزرگ",
         "موزه ملی ایران",
         "رفت و برگشت از هتل"
+      ],
+      "tr": [
+        "Golestan Sarayı",
+        "Büyük Çarşı",
+        "İran Ulusal Müzesi",
+        "Otelden alış ve otele bırakış"
+      ],
+      "ar": [
+        "قصر كلستان",
+        "البازار الكبير",
+        "المتحف الوطني الإيراني",
+        "التوصيل من الفندق وإليه"
+      ],
+      "ru": [
+        "Дворец Голестан",
+        "Большой базар",
+        "Национальный музей Ирана",
+        "Трансфер от отеля и обратно"
+      ],
+      "de": [
+        "Golestan-Palast",
+        "Großer Basar",
+        "Nationalmuseum des Iran",
+        "Abholung und Rückfahrt zum Hotel"
       ]
     }
   }

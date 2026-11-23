@@ -12,7 +12,11 @@
     },
     "text": {
       "en": "We prepare your visa authorisation code and guide you through the application step by step.",
-      "fa": "کد تأییدیه ویزا را آماده می‌کنیم و قدم‌به‌قدم در درخواست راهنمایی‌تان می‌کنیم."
+      "fa": "کد تأییدیه ویزا را آماده می‌کنیم و قدم‌به‌قدم در درخواست راهنمایی‌تان می‌کنیم.",
+      "tr": "Vize onay kodunuzu hazırlıyor ve başvuru sürecinde size adım adım rehberlik ediyoruz.",
+      "ar": "نُجهّز رمز تفويض التأشيرة ونرشدك خلال الطلب خطوة بخطوة.",
+      "ru": "Мы оформим код авторизации визы и шаг за шагом проведём вас через подачу заявления.",
+      "de": "Wir besorgen Ihren Visum-Autorisierungscode und begleiten Sie Schritt für Schritt durch den Antrag."
     }
   },
   {
@@ -28,7 +32,11 @@
     },
     "text": {
       "en": "Airport pick-up and city-to-city transfers, shared or private.",
-      "fa": "استقبال فرودگاهی و جابه‌جایی بین شهرها، گروهی یا اختصاصی."
+      "fa": "استقبال فرودگاهی و جابه‌جایی بین شهرها، گروهی یا اختصاصی.",
+      "tr": "Havalimanı karşılama ve şehirler arası transferler, paylaşımlı veya özel.",
+      "ar": "الاستقبال في المطار والتنقل بين المدن، جماعيًا أو خاصًا.",
+      "ru": "Встреча в аэропорту и переезды между городами — групповые или индивидуальные.",
+      "de": "Abholung am Flughafen und Transfers zwischen Städten – geteilt oder privat."
     }
   },
   {
@@ -44,7 +52,11 @@
     },
     "text": {
       "en": "Licensed guides who speak your language, for a day or the whole trip.",
-      "fa": "راهنمایان دارای مجوز به زبان شما، برای یک روز یا کل سفر."
+      "fa": "راهنمایان دارای مجوز به زبان شما، برای یک روز یا کل سفر.",
+      "tr": "Dilinizi konuşan lisanslı rehberler; bir günlüğüne veya tüm seyahat boyunca.",
+      "ar": "مرشدون مرخّصون يتحدثون لغتك، ليوم واحد أو للرحلة كاملة.",
+      "ru": "Лицензированные гиды, говорящие на вашем языке, — на день или на всю поездку.",
+      "de": "Lizenzierte Reiseleiter in Ihrer Sprache – für einen Tag oder die ganze Reise."
     }
   },
   {
@@ -60,7 +72,11 @@
     },
     "text": {
       "en": "Insurance that is valid in Iran, arranged before you arrive.",
-      "fa": "بیمه معتبر در ایران، پیش از ورودتان."
+      "fa": "بیمه معتبر در ایران، پیش از ورودتان.",
+      "tr": "Varışınızdan önce ayarlanan, İran'da geçerli sigorta.",
+      "ar": "تأمين صالح في إيران يُرتَّب قبل وصولك.",
+      "ru": "Страховка, действующая в Иране, оформленная до вашего приезда.",
+      "de": "Eine im Iran gültige Versicherung, organisiert vor Ihrer Ankunft."
     }
   },
   {
@@ -76,7 +92,11 @@
     },
     "text": {
       "en": "Domestic flight, train and bus tickets booked for you.",
-      "fa": "رزرو بلیت پرواز، قطار و اتوبوس داخلی."
+      "fa": "رزرو بلیت پرواز، قطار و اتوبوس داخلی.",
+      "tr": "İç hat uçak, tren ve otobüs biletleriniz sizin için ayırtılır.",
+      "ar": "نحجز لك تذاكر الطيران الداخلي والقطارات والحافلات.",
+      "ru": "Забронируем билеты на внутренние рейсы, поезда и автобусы.",
+      "de": "Wir buchen Inlandsflüge, Zug- und Bustickets für Sie."
     }
   }
 ]

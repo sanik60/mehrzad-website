@@ -1,5 +1,6 @@
 ---
 import Base from '../../../layouts/Base.astro';
+import Art from '../../../components/Art.astro';
 import { href, useT, langs, type Lang } from '../../../i18n';
 import { postsFor } from '../../../data/blog';
 
@@ -17,7 +18,7 @@ const fmt = new Intl.DateTimeFormat(lang, { dateStyle: 'long' });
   <section class="container section-tight">
     <div class="grid">
       {posts.map((p) => (
-        <article class="card"><div class="card-body">
+        <article class="card">{p.image && <Art art="blog" image={p.image} alt={p.title} />}<div class="card-body">
           <p class="meta"><time datetime={p.date.toISOString()}>{fmt.format(p.date)}</time></p>
           <h3><a href={href(lang, `blog/${p.slug}`)}>{p.title}</a></h3>
           <p>{p.description}</p>

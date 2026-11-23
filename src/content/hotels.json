@@ -13,7 +13,11 @@
     ],
     "name": {
       "en": "Sample Grand Hotel Tehran",
-      "fa": "هتل نمونه گرند تهران"
+      "fa": "هتل نمونه گرند تهران",
+      "tr": "Örnek Grand Otel Tahran",
+      "ar": "فندق غراند النموذجي – طهران",
+      "ru": "Образец: Гранд-отель Тегеран",
+      "de": "Beispiel Grand Hotel Teheran"
     }
   },
   {
@@ -27,7 +31,11 @@
     ],
     "name": {
       "en": "Sample City Hotel Tehran",
-      "fa": "هتل نمونه سیتی تهران"
+      "fa": "هتل نمونه سیتی تهران",
+      "tr": "Örnek City Otel Tahran",
+      "ar": "فندق سيتي النموذجي – طهران",
+      "ru": "Образец: Сити-отель Тегеран",
+      "de": "Beispiel City Hotel Teheran"
     }
   },
   {
@@ -42,7 +50,11 @@
     ],
     "name": {
       "en": "Sample Heritage Hotel Isfahan",
-      "fa": "هتل نمونه میراث اصفهان"
+      "fa": "هتل نمونه میراث اصفهان",
+      "tr": "Örnek Miras Otel İsfahan",
+      "ar": "فندق التراث النموذجي – أصفهان",
+      "ru": "Образец: отель «Наследие» Исфахан",
+      "de": "Beispiel Heritage Hotel Isfahan"
     }
   },
   {
@@ -55,7 +67,11 @@
     ],
     "name": {
       "en": "Sample Garden Inn Isfahan",
-      "fa": "مهمانسرای نمونه باغ اصفهان"
+      "fa": "مهمانسرای نمونه باغ اصفهان",
+      "tr": "Örnek Bahçe Pansiyonu İsfahan",
+      "ar": "نُزل الحديقة النموذجي – أصفهان",
+      "ru": "Образец: гостиница «Сад» Исфахан",
+      "de": "Beispiel Garden Inn Isfahan"
     }
   },
   {
@@ -71,7 +87,11 @@
     ],
     "name": {
       "en": "Sample Palace Hotel Shiraz",
-      "fa": "هتل نمونه پالاس شیراز"
+      "fa": "هتل نمونه پالاس شیراز",
+      "tr": "Örnek Palas Otel Şiraz",
+      "ar": "فندق القصر النموذجي – شيراز",
+      "ru": "Образец: Палас-отель Шираз",
+      "de": "Beispiel Palace Hotel Schiras"
     }
   },
   {
@@ -84,7 +104,11 @@
     ],
     "name": {
       "en": "Sample Courtyard Hotel Yazd",
-      "fa": "هتل سنتی نمونه یزد"
+      "fa": "هتل سنتی نمونه یزد",
+      "tr": "Örnek Avlulu Otel Yezd",
+      "ar": "فندق الفناء النموذجي – يزد",
+      "ru": "Образец: отель с внутренним двориком Йезд",
+      "de": "Beispiel Innenhof-Hotel Yazd"
     }
   },
   {
@@ -98,7 +122,11 @@
     ],
     "name": {
       "en": "Sample Central Hotel Tabriz",
-      "fa": "هتل نمونه مرکزی تبریز"
+      "fa": "هتل نمونه مرکزی تبریز",
+      "tr": "Örnek Merkez Otel Tebriz",
+      "ar": "الفندق المركزي النموذجي – تبريز",
+      "ru": "Образец: Центральный отель Тебриз",
+      "de": "Beispiel Central Hotel Täbris"
     }
   },
   {
@@ -113,7 +141,11 @@
     ],
     "name": {
       "en": "Sample Shrine View Hotel Mashhad",
-      "fa": "هتل نمونه نزدیک حرم مشهد"
+      "fa": "هتل نمونه نزدیک حرم مشهد",
+      "tr": "Örnek Türbe Manzaralı Otel Meşhed",
+      "ar": "فندق إطلالة الحرم النموذجي – مشهد",
+      "ru": "Образец: отель с видом на святыню Мешхед",
+      "de": "Beispiel Hotel mit Schreinblick Maschhad"
     }
   },
   {
@@ -126,7 +158,11 @@
     ],
     "name": {
       "en": "Sample Family Hotel Mashhad",
-      "fa": "هتل نمونه خانوادگی مشهد"
+      "fa": "هتل نمونه خانوادگی مشهد",
+      "tr": "Örnek Aile Oteli Meşhed",
+      "ar": "الفندق العائلي النموذجي – مشهد",
+      "ru": "Образец: семейный отель Мешхед",
+      "de": "Beispiel Familienhotel Maschhad"
     }
   }
 ]

@@ -12,7 +12,11 @@
     },
     "text": {
       "en": "Implants, veneers, crowns and full smile makeovers.",
-      "fa": "ایمپلنت، لمینت، روکش و طراحی لبخند."
+      "fa": "ایمپلنت، لمینت، روکش و طراحی لبخند.",
+      "tr": "İmplant, kaplama (veneer), kron ve gülüş tasarımı.",
+      "ar": "زراعة الأسنان والقشور والتيجان وتصميم الابتسامة الكامل.",
+      "ru": "Импланты, виниры, коронки и полное преображение улыбки.",
+      "de": "Implantate, Veneers, Kronen und komplette Smile-Makeovers."
     }
   },
   {
@@ -28,7 +32,11 @@
     },
     "text": {
       "en": "Rhinoplasty and other procedures with experienced surgeons.",
-      "fa": "جراحی بینی و سایر اعمال با جراحان باتجربه."
+      "fa": "جراحی بینی و سایر اعمال با جراحان باتجربه.",
+      "tr": "Deneyimli cerrahlarla burun estetiği ve diğer işlemler.",
+      "ar": "تجميل الأنف وإجراءات أخرى مع جراحين ذوي خبرة.",
+      "ru": "Ринопластика и другие операции у опытных хирургов.",
+      "de": "Nasenkorrekturen und weitere Eingriffe durch erfahrene Chirurgen."
     }
   },
   {
@@ -44,7 +52,11 @@
     },
     "text": {
       "en": "LASIK, cataract and other eye procedures.",
-      "fa": "لیزیک، آب‌مروارید و سایر اعمال چشم."
+      "fa": "لیزیک، آب‌مروارید و سایر اعمال چشم.",
+      "tr": "LASIK, katarakt ve diğer göz işlemleri.",
+      "ar": "الليزك وإزالة المياه البيضاء وعمليات العيون الأخرى.",
+      "ru": "LASIK, лечение катаракты и другие операции на глазах.",
+      "de": "LASIK, Grauer Star und weitere Augeneingriffe."
     }
   },
   {
@@ -60,7 +72,11 @@
     },
     "text": {
       "en": "Consultation and treatment at specialist fertility centres.",
-      "fa": "مشاوره و درمان در مراکز تخصصی ناباروری."
+      "fa": "مشاوره و درمان در مراکز تخصصی ناباروری.",
+      "tr": "Uzman tüp bebek merkezlerinde danışmanlık ve tedavi.",
+      "ar": "استشارات وعلاج في مراكز متخصصة للخصوبة.",
+      "ru": "Консультации и лечение в специализированных центрах репродукции.",
+      "de": "Beratung und Behandlung in spezialisierten Kinderwunschzentren."
     }
   },
   {
@@ -76,7 +92,11 @@
     },
     "text": {
       "en": "Full check-up packages completed in one or two days.",
-      "fa": "بسته‌های چکاپ کامل در یک یا دو روز."
+      "fa": "بسته‌های چکاپ کامل در یک یا دو روز.",
+      "tr": "Bir veya iki günde tamamlanan kapsamlı check-up paketleri.",
+      "ar": "باقات فحص شامل تُنجَز في يوم أو يومين.",
+      "ru": "Пакеты полного обследования за один-два дня.",
+      "de": "Komplette Check-up-Pakete in ein bis zwei Tagen."
     }
   }
 ]

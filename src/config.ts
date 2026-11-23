@@ -6,6 +6,8 @@ export const site = settings as {
   whatsapp: string; // international format, digits only
   email: string;
   demoContent: boolean;
+  heroImage?: string;
+  healthImage?: string;
 };
 
 export const whatsappDigits = site.whatsapp.replace(/\D/g, '');

@@ -138,6 +138,18 @@ const en = {
   'footer.rights': 'All rights reserved.',
   'notfound.title': 'Page not found',
   'notfound.back': 'Back to home',
+  'a11y.skip': 'Zum Inhalt springen',
+  'a11y.stars': '{n} Sterne',
+  'a11y.mainNav': 'Hauptmenü',
+  'credits.title': 'Bildnachweise',
+  'credits.intro': 'Die Fotos stammen von Wikimedia Commons und werden unter den angegebenen Lizenzen verwendet. Vielen Dank an die Fotografinnen und Fotografen.',
+  'credits.photo': 'Foto',
+  'a11y.skip': 'Skip to content',
+  'a11y.stars': '{n} stars',
+  'a11y.mainNav': 'Main menu',
+  'credits.title': 'Photo credits',
+  'credits.intro': 'Photos are from Wikimedia Commons and are used under the licences shown. Thank you to the photographers.',
+  'credits.photo': 'Photo',
 } satisfies Dict;
 
 type Key = keyof typeof en;
@@ -241,6 +253,12 @@ const fa: Partial<Record<Key, string>> = {
   'footer.rights': 'تمامی حقوق محفوظ است.',
   'notfound.title': 'صفحه پیدا نشد',
   'notfound.back': 'بازگشت به خانه',
+  'a11y.skip': 'رفتن به محتوا',
+  'a11y.stars': '{n} ستاره',
+  'a11y.mainNav': 'منوی اصلی',
+  'credits.title': 'منابع عکس‌ها',
+  'credits.intro': 'عکس‌ها از ویکی‌مدیا کامنز هستند و تحت مجوزهای ذکرشده استفاده شده‌اند. از عکاسان سپاسگزاریم.',
+  'credits.photo': 'عکس',
 };
 
 const tr: Partial<Record<Key, string>> = {
@@ -342,6 +360,12 @@ const tr: Partial<Record<Key, string>> = {
   'footer.rights': 'Tüm hakları saklıdır.',
   'notfound.title': 'Sayfa bulunamadı',
   'notfound.back': 'Ana sayfaya dön',
+  'a11y.skip': 'İçeriğe geç',
+  'a11y.stars': '{n} yıldız',
+  'a11y.mainNav': 'Ana menü',
+  'credits.title': 'Fotoğraf kaynakları',
+  'credits.intro': 'Fotoğraflar Wikimedia Commons’tan alınmış olup belirtilen lisanslar kapsamında kullanılmaktadır. Fotoğrafçılara teşekkür ederiz.',
+  'credits.photo': 'Fotoğraf',
 };
 
 const ar: Partial<Record<Key, string>> = {
@@ -443,6 +467,12 @@ const ar: Partial<Record<Key, string>> = {
   'footer.rights': 'جميع الحقوق محفوظة.',
   'notfound.title': 'الصفحة غير موجودة',
   'notfound.back': 'العودة إلى الرئيسية',
+  'a11y.skip': 'انتقل إلى المحتوى',
+  'a11y.stars': '{n} نجوم',
+  'a11y.mainNav': 'القائمة الرئيسية',
+  'credits.title': 'مصادر الصور',
+  'credits.intro': 'الصور من ويكيميديا كومنز وتُستخدم وفق التراخيص المذكورة. شكرًا للمصورين.',
+  'credits.photo': 'صورة',
 };
 
 const ru: Partial<Record<Key, string>> = {
@@ -544,6 +574,12 @@ const ru: Partial<Record<Key, string>> = {
   'footer.rights': 'Все права защищены.',
   'notfound.title': 'Страница не найдена',
   'notfound.back': 'На главную',
+  'a11y.skip': 'Перейти к содержанию',
+  'a11y.stars': 'Звёзд: {n}',
+  'a11y.mainNav': 'Главное меню',
+  'credits.title': 'Авторы фотографий',
+  'credits.intro': 'Фотографии взяты с Викисклада и используются по указанным лицензиям. Благодарим фотографов.',
+  'credits.photo': 'Фото',
 };
 
 const de: Partial<Record<Key, string>> = {

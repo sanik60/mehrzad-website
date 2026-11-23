@@ -62,7 +62,7 @@ const schema = {
           <a href={`${href(lang, 'hotels')}?city=${d.slug}`}>{t('cta.viewAll')} <span class="arrow">→</span></a>
         </div>
         <ul class="hotel-list">
-          {cityHotels.map((h) => <li><Stars count={h.stars} /> {pick(h.name, lang)}</li>)}
+          {cityHotels.map((h) => <li><Stars count={h.stars} lang={lang} /> {pick(h.name, lang)}</li>)}
         </ul>
       </section>
     )}

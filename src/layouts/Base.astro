@@ -59,7 +59,7 @@ const rtl = dir === 'rtl';
     {schema && <script type="application/ld+json" set:html={JSON.stringify(schema)} />}
   </head>
   <body class={rtl ? 'rtl' : ''}>
-    <a class="skip" href="#main">Skip to content</a>
+    <a class="skip" href="#main">{t('a11y.skip')}</a>
     {site.demoContent && <div class="demo-bar">{t('demo.notice')}</div>}
     <Header lang={lang} path={path} />
     <main id="main">

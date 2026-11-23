@@ -11,11 +11,19 @@
     },
     "summary": {
       "en": "The capital at the foot of the Alborz mountains: palaces, museums, bazaars and the gateway to the Dizin and Shemshak ski resorts.",
-      "fa": "پایتخت در دامنه البرز: کاخ‌ها، موزه‌ها، بازارها و دروازه پیست‌های اسکی دیزین و شمشک."
+      "fa": "پایتخت در دامنه البرز: کاخ‌ها، موزه‌ها، بازارها و دروازه پیست‌های اسکی دیزین و شمشک.",
+      "tr": "Elburz Dağları'nın eteğindeki başkent: saraylar, müzeler, çarşılar ve Dizin ile Şemşek kayak merkezlerine açılan kapı.",
+      "ar": "العاصمة عند سفوح جبال البرز: قصور ومتاحف وأسواق، وبوابة منتجعَي التزلج ديزين وشمشك.",
+      "ru": "Столица у подножия гор Эльбурс: дворцы, музеи, базары и ворота к горнолыжным курортам Дизин и Шемшак.",
+      "de": "Die Hauptstadt am Fuß des Elburs-Gebirges: Paläste, Museen, Basare und das Tor zu den Skigebieten Dizin und Schemschak."
     },
     "airport": {
       "en": "Imam Khomeini International Airport (IKA)",
-      "fa": "فرودگاه بین‌المللی امام خمینی (IKA)"
+      "fa": "فرودگاه بین‌المللی امام خمینی (IKA)",
+      "tr": "İmam Humeyni Uluslararası Havalimanı (IKA)",
+      "ar": "مطار الإمام الخميني الدولي (IKA)",
+      "ru": "Международный аэропорт имени Имама Хомейни (IKA)",
+      "de": "Internationaler Flughafen Imam Khomeini (IKA)"
     },
     "sights": {
       "en": [
@@ -31,6 +39,34 @@
         "بازار بزرگ تهران",
         "تله‌کابین توچال",
         "برج میلاد"
+      ],
+      "tr": [
+        "Golestan Sarayı",
+        "İran Ulusal Müzesi",
+        "Tahran Büyük Çarşısı",
+        "Toçal Teleferiği",
+        "Milad Kulesi"
+      ],
+      "ar": [
+        "قصر كلستان",
+        "المتحف الوطني الإيراني",
+        "بازار طهران الكبير",
+        "تلفريك توچال",
+        "برج ميلاد"
+      ],
+      "ru": [
+        "Дворец Голестан",
+        "Национальный музей Ирана",
+        "Большой базар Тегерана",
+        "Канатная дорога Точал",
+        "Башня Милад"
+      ],
+      "de": [
+        "Golestan-Palast",
+        "Nationalmuseum des Iran",
+        "Großer Basar von Teheran",
+        "Seilbahn Tochal",
+        "Milad-Turm"
       ]
     }
   },
@@ -46,11 +82,19 @@
     },
     "summary": {
       "en": "Blue-tiled mosques, historic bridges and one of the largest city squares in the world.",
-      "fa": "مساجد کاشی‌کاری‌شده، پل‌های تاریخی و یکی از بزرگ‌ترین میدان‌های جهان."
+      "fa": "مساجد کاشی‌کاری‌شده، پل‌های تاریخی و یکی از بزرگ‌ترین میدان‌های جهان.",
+      "tr": "Mavi çinili camiler, tarihi köprüler ve dünyanın en büyük şehir meydanlarından biri.",
+      "ar": "مساجد مكسوّة بالبلاط الأزرق وجسور تاريخية وواحد من أكبر الميادين في العالم.",
+      "ru": "Мечети с голубыми изразцами, исторические мосты и одна из крупнейших городских площадей мира.",
+      "de": "Blau gekachelte Moscheen, historische Brücken und einer der größten Stadtplätze der Welt."
     },
     "airport": {
       "en": "Isfahan International Airport (IFN)",
-      "fa": "فرودگاه بین‌المللی اصفهان (IFN)"
+      "fa": "فرودگاه بین‌المللی اصفهان (IFN)",
+      "tr": "İsfahan Uluslararası Havalimanı (IFN)",
+      "ar": "مطار أصفهان الدولي (IFN)",
+      "ru": "Международный аэропорт Исфахан (IFN)",
+      "de": "Internationaler Flughafen Isfahan (IFN)"
     },
     "sights": {
       "en": [
@@ -66,6 +110,34 @@
         "سی‌وسه‌پل",
         "پل خواجو",
         "کلیسای وانک"
+      ],
+      "tr": [
+        "Nakş-ı Cihan Meydanı",
+        "Şeyh Lütfullah Camii",
+        "Siosepol Köprüsü",
+        "Hacu Köprüsü",
+        "Vank Katedrali"
+      ],
+      "ar": [
+        "ميدان نقش جهان",
+        "مسجد الشيخ لطف الله",
+        "جسر سي وسه بل",
+        "جسر خواجو",
+        "كاتدرائية فانك"
+      ],
+      "ru": [
+        "Площадь Накш-е Джахан",
+        "Мечеть шейха Лотфоллы",
+        "Мост Си-о-се-поль",
+        "Мост Хаджу",
+        "Ванкский собор"
+      ],
+      "de": [
+        "Naqsch-e-Dschahan-Platz",
+        "Scheich-Lotfollah-Moschee",
+        "Si-o-se-Pol-Brücke",
+        "Chadschu-Brücke",
+        "Vank-Kathedrale"
       ]
     }
   },
@@ -81,11 +153,19 @@
     },
     "summary": {
       "en": "City of poets and gardens, and the base for visiting Persepolis.",
-      "fa": "شهر شاعران و باغ‌ها و مبدأ بازدید از تخت جمشید."
+      "fa": "شهر شاعران و باغ‌ها و مبدأ بازدید از تخت جمشید.",
+      "tr": "Şairlerin ve bahçelerin şehri; Persepolis gezileri için başlangıç noktası.",
+      "ar": "مدينة الشعراء والحدائق، ونقطة الانطلاق لزيارة برسبوليس.",
+      "ru": "Город поэтов и садов и отправная точка для поездки в Персеполь.",
+      "de": "Stadt der Dichter und Gärten und Ausgangspunkt für Besuche in Persepolis."
     },
     "airport": {
       "en": "Shiraz International Airport (SYZ)",
-      "fa": "فرودگاه بین‌المللی شیراز (SYZ)"
+      "fa": "فرودگاه بین‌المللی شیراز (SYZ)",
+      "tr": "Şiraz Uluslararası Havalimanı (SYZ)",
+      "ar": "مطار شيراز الدولي (SYZ)",
+      "ru": "Международный аэропорт Шираз (SYZ)",
+      "de": "Internationaler Flughafen Schiras (SYZ)"
     },
     "sights": {
       "en": [
@@ -101,6 +181,34 @@
         "باغ ارم",
         "آرامگاه حافظ",
         "بازار وکیل"
+      ],
+      "tr": [
+        "Persepolis",
+        "Nasırülmülk Camii",
+        "Eram Bahçesi",
+        "Hafız Türbesi",
+        "Vekil Çarşısı"
+      ],
+      "ar": [
+        "برسبوليس",
+        "مسجد نصير الملك",
+        "حديقة إرم",
+        "ضريح حافظ",
+        "بازار وكيل"
+      ],
+      "ru": [
+        "Персеполь",
+        "Мечеть Насир оль-Мольк",
+        "Сад Эрам",
+        "Гробница Хафиза",
+        "Базар Вакиль"
+      ],
+      "de": [
+        "Persepolis",
+        "Nasir-ol-Molk-Moschee",
+        "Eram-Garten",
+        "Grabmal des Hafis",
+        "Wakil-Basar"
       ]
     }
   },
@@ -116,11 +224,19 @@
     },
     "summary": {
       "en": "A desert city of mud-brick lanes and wind towers, listed by UNESCO.",
-      "fa": "شهر کویری کوچه‌های خشتی و بادگیرها، ثبت‌شده در یونسکو."
+      "fa": "شهر کویری کوچه‌های خشتی و بادگیرها، ثبت‌شده در یونسکو.",
+      "tr": "Kerpiç sokakları ve rüzgâr kuleleriyle UNESCO listesindeki bir çöl şehri.",
+      "ar": "مدينة صحراوية ذات أزقة من الطوب اللبن وأبراج الرياح، مدرجة في قائمة اليونسكو.",
+      "ru": "Пустынный город глинобитных улочек и ветряных башен, внесённый в список ЮНЕСКО.",
+      "de": "Eine Wüstenstadt mit Lehmziegelgassen und Windtürmen, UNESCO-Welterbe."
     },
     "airport": {
       "en": "Yazd Airport (AZD)",
-      "fa": "فرودگاه یزد (AZD)"
+      "fa": "فرودگاه یزد (AZD)",
+      "tr": "Yezd Havalimanı (AZD)",
+      "ar": "مطار يزد (AZD)",
+      "ru": "Аэропорт Йезд (AZD)",
+      "de": "Flughafen Yazd (AZD)"
     },
     "sights": {
       "en": [
@@ -136,6 +252,34 @@
         "باغ دولت‌آباد",
         "مجموعه امیرچخماق",
         "آتشکده زرتشتیان"
+      ],
+      "tr": [
+        "Tarihi eski şehir",
+        "Yezd Cuma Camii",
+        "Devletabad Bahçesi",
+        "Emir Çakmak Külliyesi",
+        "Zerdüşt Ateş Tapınağı"
+      ],
+      "ar": [
+        "المدينة القديمة التاريخية",
+        "المسجد الجامع في يزد",
+        "حديقة دولت آباد",
+        "مجمع أمير چخماق",
+        "معبد النار الزرادشتي"
+      ],
+      "ru": [
+        "Исторический старый город",
+        "Пятничная мечеть Йезда",
+        "Сад Доулатабад",
+        "Комплекс Амир Чакмак",
+        "Зороастрийский храм огня"
+      ],
+      "de": [
+        "Historische Altstadt",
+        "Freitagsmoschee von Yazd",
+        "Dowlatabad-Garten",
+        "Amir-Tschachmaq-Komplex",
+        "Zoroastrischer Feuertempel"
       ]
     }
   },
@@ -151,15 +295,27 @@
     },
     "summary": {
       "en": "A Silk Road trading city in the north-west, close to the Turkish and Azerbaijani borders.",
-      "fa": "شهر تجاری جاده ابریشم در شمال‌غرب، نزدیک مرزهای ترکیه و آذربایجان."
+      "fa": "شهر تجاری جاده ابریشم در شمال‌غرب، نزدیک مرزهای ترکیه و آذربایجان.",
+      "tr": "Kuzeybatıda, Türkiye ve Azerbaycan sınırlarına yakın bir İpek Yolu ticaret şehri.",
+      "ar": "مدينة تجارية على طريق الحرير في الشمال الغربي، قريبة من الحدود التركية والأذربيجانية.",
+      "ru": "Торговый город Шёлкового пути на северо-западе, недалеко от границ с Турцией и Азербайджаном.",
+      "de": "Eine Handelsstadt an der Seidenstraße im Nordwesten, nahe der türkischen und aserbaidschanischen Grenze."
     },
     "airport": {
       "en": "Tabriz International Airport (TBZ)",
-      "fa": "فرودگاه بین‌المللی تبریز (TBZ)"
+      "fa": "فرودگاه بین‌المللی تبریز (TBZ)",
+      "tr": "Tebriz Uluslararası Havalimanı (TBZ)",
+      "ar": "مطار تبريز الدولي (TBZ)",
+      "ru": "Международный аэропорт Тебриз (TBZ)",
+      "de": "Internationaler Flughafen Täbris (TBZ)"
     },
     "borders": {
       "en": "Bazargan (Turkey) and Jolfa (Nakhchivan, Azerbaijan)",
-      "fa": "بازرگان (ترکیه) و جلفا (نخجوان، آذربایجان)"
+      "fa": "بازرگان (ترکیه) و جلفا (نخجوان، آذربایجان)",
+      "tr": "Bazargan (Türkiye) ve Culfa (Nahçıvan, Azerbaycan)",
+      "ar": "بازرگان (تركيا) وجلفا (نخجوان، أذربيجان)",
+      "ru": "Базарган (Турция) и Джульфа (Нахичевань, Азербайджан)",
+      "de": "Bazargan (Türkei) und Dscholfa (Nachitschewan, Aserbaidschan)"
     },
     "sights": {
       "en": [
@@ -175,6 +331,34 @@
         "ائل‌گلی",
         "روستای کندوان",
         "ارگ تبریز"
+      ],
+      "tr": [
+        "Tebriz Tarihi Çarşısı",
+        "Gök Mescit",
+        "Elgöli Parkı",
+        "Kandovan köyü",
+        "Tebriz Kalesi (Arg)"
+      ],
+      "ar": [
+        "بازار تبريز التاريخي",
+        "المسجد الأزرق",
+        "حديقة إيل گلي",
+        "قرية كندوان",
+        "قلعة تبريز (أرك)"
+      ],
+      "ru": [
+        "Исторический базар Тебриза",
+        "Голубая мечеть",
+        "Парк Эль-Гёли",
+        "Деревня Кандован",
+        "Цитадель Арк-е Тебриз"
+      ],
+      "de": [
+        "Historischer Basar von Täbris",
+        "Blaue Moschee",
+        "El-Goli-Park",
+        "Dorf Kandovan",
+        "Zitadelle Arg-e Täbris"
       ]
     }
   },
@@ -190,15 +374,27 @@
     },
     "summary": {
       "en": "Home to the Imam Reza Shrine, one of the most visited pilgrimage sites in the world.",
-      "fa": "محل حرم امام رضا (ع)، از پربازدیدترین زیارتگاه‌های جهان."
+      "fa": "محل حرم امام رضا (ع)، از پربازدیدترین زیارتگاه‌های جهان.",
+      "tr": "Dünyanın en çok ziyaret edilen hac yerlerinden biri olan İmam Rıza Türbesi'nin şehri.",
+      "ar": "موطن حرم الإمام الرضا (ع)، أحد أكثر المزارات الدينية زيارةً في العالم.",
+      "ru": "Здесь находится мавзолей имама Резы — одно из самых посещаемых мест паломничества в мире.",
+      "de": "Heimat des Imam-Reza-Schreins, einer der meistbesuchten Pilgerstätten der Welt."
     },
     "airport": {
       "en": "Mashhad International Airport (MHD)",
-      "fa": "فرودگاه بین‌المللی مشهد (MHD)"
+      "fa": "فرودگاه بین‌المللی مشهد (MHD)",
+      "tr": "Meşhed Uluslararası Havalimanı (MHD)",
+      "ar": "مطار مشهد الدولي (MHD)",
+      "ru": "Международный аэропорт Мешхед (MHD)",
+      "de": "Internationaler Flughafen Maschhad (MHD)"
     },
     "borders": {
       "en": "Sarakhs and Bajgiran (Turkmenistan)",
-      "fa": "سرخس و باجگیران (ترکمنستان)"
+      "fa": "سرخس و باجگیران (ترکمنستان)",
+      "tr": "Serahs ve Bacgiran (Türkmenistan)",
+      "ar": "سرخس وباجگيران (تركمانستان)",
+      "ru": "Серахс и Баджгиран (Туркменистан)",
+      "de": "Sarachs und Badschgiran (Turkmenistan)"
     },
     "sights": {
       "en": [
@@ -212,6 +408,30 @@
         "آرامگاه فردوسی (توس)",
         "پارک کوه‌سنگی",
         "طرقبه و شاندیز"
+      ],
+      "tr": [
+        "İmam Rıza Türbesi",
+        "Firdevsi Türbesi (Tus)",
+        "Kuh-Sengi Parkı",
+        "Torgabe ve Şandiz"
+      ],
+      "ar": [
+        "حرم الإمام الرضا (ع)",
+        "ضريح الفردوسي (طوس)",
+        "حديقة كوه سنكي",
+        "طرقبه وشانديز"
+      ],
+      "ru": [
+        "Мавзолей имама Резы",
+        "Мавзолей Фирдоуси (Тус)",
+        "Парк Кух-Санги",
+        "Торгабе и Шандиз"
+      ],
+      "de": [
+        "Imam-Reza-Schrein",
+        "Grabmal des Ferdowsi (Tus)",
+        "Kuh-Sangi-Park",
+        "Torghabeh und Schandiz"
       ]
     }
   }

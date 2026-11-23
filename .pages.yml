@@ -52,6 +52,8 @@ content:
         pattern: { regex: "^[0-9]{8,15}$", message: "Digits only, with country code, no + or spaces" }
       - { name: email, label: Email, type: string, required: true }
       - { name: demoContent, label: Show "demo content" bar, type: boolean }
+      - { name: heroImage, label: Home page background photo, type: image }
+      - { name: healthImage, label: Health tourism background photo, type: image }
 
   - name: tours
     label: Tours
@@ -132,7 +134,7 @@ content:
             - { name: parking, label: Parking }
             - { name: restaurant, label: Restaurant }
             - { name: shuttle, label: Airport shuttle }
-      - { name: image, label: Photo, type: image }
+      - { name: image, label: Photo (optional; uses the city photo when empty), type: image }
 
   - name: destinations
     label: Cities
@@ -196,6 +198,7 @@ content:
       - { name: title, label: Title, type: string, required: true }
       - { name: description, label: Short description (for Google), type: text, required: true }
       - { name: date, label: Date, type: date, required: true }
+      - { name: image, label: Cover photo (optional; translations reuse the English one), type: image }
       - { name: body, label: Article, type: rich-text, options: { format: markdown } }
 
   - name: blog-fa
@@ -216,6 +219,7 @@ content:
       - { name: title, label: Title, type: string, required: true }
       - { name: description, label: Short description (for Google), type: text, required: true }
       - { name: date, label: Date, type: date, required: true }
+      - { name: image, label: Cover photo (optional; translations reuse the English one), type: image }
       - { name: body, label: Article, type: rich-text, options: { format: markdown } }
 
   - name: blog-tr
@@ -236,6 +240,7 @@ content:
       - { name: title, label: Title, type: string, required: true }
       - { name: description, label: Short description (for Google), type: text, required: true }
       - { name: date, label: Date, type: date, required: true }
+      - { name: image, label: Cover photo (optional; translations reuse the English one), type: image }
       - { name: body, label: Article, type: rich-text, options: { format: markdown } }
 
   - name: blog-ar
@@ -256,6 +261,7 @@ content:
       - { name: title, label: Title, type: string, required: true }
       - { name: description, label: Short description (for Google), type: text, required: true }
       - { name: date, label: Date, type: date, required: true }
+      - { name: image, label: Cover photo (optional; translations reuse the English one), type: image }
       - { name: body, label: Article, type: rich-text, options: { format: markdown } }
 
   - name: blog-ru
@@ -276,6 +282,7 @@ content:
       - { name: title, label: Title, type: string, required: true }
       - { name: description, label: Short description (for Google), type: text, required: true }
       - { name: date, label: Date, type: date, required: true }
+      - { name: image, label: Cover photo (optional; translations reuse the English one), type: image }
       - { name: body, label: Article, type: rich-text, options: { format: markdown } }
 
   - name: blog-de
@@ -296,4 +303,5 @@ content:
       - { name: title, label: Title, type: string, required: true }
       - { name: description, label: Short description (for Google), type: text, required: true }
       - { name: date, label: Date, type: date, required: true }
+      - { name: image, label: Cover photo (optional; translations reuse the English one), type: image }
       - { name: body, label: Article, type: rich-text, options: { format: markdown } }

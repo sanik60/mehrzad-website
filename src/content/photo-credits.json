@@ -1,0 +1,20 @@
+[
+  {
+    "key": "hero",
+    "image": "/mehrzad-website/images/photos/hero-1600.webp",
+    "title": "File:Naqsh-e Jahan Square from the gheisariye Vault.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Naqsh-e_Jahan_Square_from_the_gheisariye_Vault.jpg",
+    "artist": "Amir Pashaei",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+  },
+  {
+    "key": "tour-classic-persia",
+    "image": "/mehrzad-website/images/photos/tour-classic-persia-1600.webp",
+    "title": "File:Persépolis, Irán, 2016-09-24, DD 56.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Pers%C3%A9polis,_Ir%C3%A1n,_2016-09-24,_DD_56.jpg",
+    "artist": "Diego Delso",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+  }
+]
