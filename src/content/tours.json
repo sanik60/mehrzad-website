@@ -127,7 +127,8 @@
         "Ausrüstungsverleih und Skilehrer",
         "Private Transfers ab Teheran"
       ]
-    }
+    },
+    "image": "/mehrzad-website/images/photos/tour-dizin-ski-week-1600.webp"
   },
   {
     "slug": "mashhad-pilgrimage",
@@ -190,7 +191,8 @@
         "Grabmal von Ferdowsi in Tus",
         "Flughafentransfers"
       ]
-    }
+    },
+    "image": "/mehrzad-website/images/photos/tour-mashhad-pilgrimage-1600.webp"
   },
   {
     "slug": "silk-road-north-west",
@@ -253,7 +255,8 @@
         "Armenische Klöster bei Dscholfa",
         "Museen von Teheran"
       ]
-    }
+    },
+    "image": "/mehrzad-website/images/photos/tour-silk-road-north-west-1600.webp"
   },
   {
     "slug": "shiraz-gardens",
@@ -315,7 +318,8 @@
         "Kochkurs bei einer einheimischen Familie",
         "Tagesausflug nach Persepolis"
       ]
-    }
+    },
+    "image": "/mehrzad-website/images/photos/tour-shiraz-gardens-1600.webp"
   },
   {
     "slug": "tehran-day-tour",
@@ -377,6 +381,7 @@
         "Nationalmuseum des Iran",
         "Abholung und Rückfahrt zum Hotel"
       ]
-    }
+    },
+    "image": "/mehrzad-website/images/photos/tour-tehran-day-tour-1600.webp"
   }
 ]

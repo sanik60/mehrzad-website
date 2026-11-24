@@ -3,6 +3,7 @@ slug: best-time-to-visit-iran
 title: "When is the best time to visit Iran?"
 description: "Seasons, weather and what each part of the year is best for, from skiing to desert trips."
 date: 2026-10-15
+image: /mehrzad-website/images/photos/blog-best-time-to-visit-iran-1600.webp
 ---
 
 Iran is a large country with very different climates, so the best time depends on what you want to do.

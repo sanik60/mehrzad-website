@@ -68,7 +68,8 @@
         "Seilbahn Tochal",
         "Milad-Turm"
       ]
-    }
+    },
+    "image": "/mehrzad-website/images/photos/city-tehran-1600.webp"
   },
   {
     "slug": "isfahan",
@@ -139,7 +140,8 @@
         "Chadschu-Brücke",
         "Vank-Kathedrale"
       ]
-    }
+    },
+    "image": "/mehrzad-website/images/photos/city-isfahan-1600.webp"
   },
   {
     "slug": "shiraz",
@@ -210,7 +212,8 @@
         "Grabmal des Hafis",
         "Wakil-Basar"
       ]
-    }
+    },
+    "image": "/mehrzad-website/images/photos/city-shiraz-1600.webp"
   },
   {
     "slug": "yazd",
@@ -281,7 +284,8 @@
         "Amir-Tschachmaq-Komplex",
         "Zoroastrischer Feuertempel"
       ]
-    }
+    },
+    "image": "/mehrzad-website/images/photos/city-yazd-1600.webp"
   },
   {
     "slug": "tabriz",
@@ -360,7 +364,8 @@
         "Dorf Kandovan",
         "Zitadelle Arg-e Täbris"
       ]
-    }
+    },
+    "image": "/mehrzad-website/images/photos/city-tabriz-1600.webp"
   },
   {
     "slug": "mashhad",
@@ -433,6 +438,7 @@
         "Kuh-Sangi-Park",
         "Torghabeh und Schandiz"
       ]
-    }
+    },
+    "image": "/mehrzad-website/images/photos/city-mashhad-1600.webp"
   }
 ]
