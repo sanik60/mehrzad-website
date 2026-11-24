@@ -2,7 +2,7 @@
   "brand": "AVA Trip",
   "whatsapp": "989128508199",
   "email": "info@example.com",
-  "demoContent": true,
+  "demoContent": false,
   "heroImage": "/mehrzad-website/images/photos/hero-1600.webp",
   "healthImage": "/mehrzad-website/images/photos/health-1600.webp"
 }
