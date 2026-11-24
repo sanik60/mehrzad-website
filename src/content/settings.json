@@ -2,6 +2,6 @@
   "brand": "nik",
   "whatsapp": "989000000000",
   "email": "info@example.com",
-  "demoContent": false,
+  "demoContent": true,
   "heroImage": "/mehrzad-website/images/photos/hero-1600.webp"
 }
